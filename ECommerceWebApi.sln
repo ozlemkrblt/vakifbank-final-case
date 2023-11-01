@@ -7,9 +7,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ECommerceWebApi", "ECommerc
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ECommerce.Base", "..\ECommerce.Base\ECommerce.Base.csproj", "{65026B5A-A7EC-4821-B89A-85E646BCC76C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ECommerce.Data", "..\ECommerce.Data\ECommerce.Data.csproj", "{BC15D048-D617-44B3-86E6-B27BCD061123}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ECommerce.Data", "..\ECommerce.Data\ECommerce.Data.csproj", "{BC15D048-D617-44B3-86E6-B27BCD061123}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ECommerce.Payment", "..\ECommerce.Payment\ECommerce.Payment.csproj", "{07B6387A-8EC2-4B26-ACE6-281057708EC5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ECommerce.Payment", "..\ECommerce.Payment\ECommerce.Payment.csproj", "{07B6387A-8EC2-4B26-ACE6-281057708EC5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
