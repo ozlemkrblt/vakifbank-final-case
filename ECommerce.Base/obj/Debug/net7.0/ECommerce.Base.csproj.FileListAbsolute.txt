@@ -1,0 +1,12 @@
+C:\Users\hp\Desktop\vakifbank-final-case\ECommerce.Base\bin\Debug\net7.0\ECommerce.Base.deps.json
+C:\Users\hp\Desktop\vakifbank-final-case\ECommerce.Base\bin\Debug\net7.0\ECommerce.Base.dll
+C:\Users\hp\Desktop\vakifbank-final-case\ECommerce.Base\bin\Debug\net7.0\ECommerce.Base.pdb
+C:\Users\hp\Desktop\vakifbank-final-case\ECommerce.Base\obj\Debug\net7.0\ECommerce.Base.csproj.AssemblyReference.cache
+C:\Users\hp\Desktop\vakifbank-final-case\ECommerce.Base\obj\Debug\net7.0\ECommerce.Base.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\hp\Desktop\vakifbank-final-case\ECommerce.Base\obj\Debug\net7.0\ECommerce.Base.AssemblyInfoInputs.cache
+C:\Users\hp\Desktop\vakifbank-final-case\ECommerce.Base\obj\Debug\net7.0\ECommerce.Base.AssemblyInfo.cs
+C:\Users\hp\Desktop\vakifbank-final-case\ECommerce.Base\obj\Debug\net7.0\ECommerce.Base.csproj.CoreCompileInputs.cache
+C:\Users\hp\Desktop\vakifbank-final-case\ECommerce.Base\obj\Debug\net7.0\ECommerce.Base.dll
+C:\Users\hp\Desktop\vakifbank-final-case\ECommerce.Base\obj\Debug\net7.0\refint\ECommerce.Base.dll
+C:\Users\hp\Desktop\vakifbank-final-case\ECommerce.Base\obj\Debug\net7.0\ECommerce.Base.pdb
+C:\Users\hp\Desktop\vakifbank-final-case\ECommerce.Base\obj\Debug\net7.0\ref\ECommerce.Base.dll

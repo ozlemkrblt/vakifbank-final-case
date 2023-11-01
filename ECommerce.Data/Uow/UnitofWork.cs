@@ -1,9 +1,8 @@
-﻿
-
-using ECommerce.Data.Context;
+﻿using ECommerce.Data.Context;
 using ECommerce.Data.Domain;
 using ECommerce.Data.Repository;
 using Microsoft.EntityFrameworkCore;
+using Serilog;
 
 namespace ECommerce.Data.Uow;
 

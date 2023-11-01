@@ -15,4 +15,5 @@ public class Admin : User
 public class AdminConfiguration : IEntityTypeConfiguration<Admin>
 {
     public void Configure(EntityTypeBuilder<Admin> builder)
-    {
+    { }
+}

@@ -1,0 +1,17 @@
+C:\Users\hp\Desktop\vakifbank-final-case\ECommerce.Schema\bin\Debug\net7.0\ECommerce.Schema.deps.json
+C:\Users\hp\Desktop\vakifbank-final-case\ECommerce.Schema\bin\Debug\net7.0\ECommerce.Schema.dll
+C:\Users\hp\Desktop\vakifbank-final-case\ECommerce.Schema\bin\Debug\net7.0\ECommerce.Schema.pdb
+C:\Users\hp\Desktop\vakifbank-final-case\ECommerce.Schema\bin\Debug\net7.0\ECommerce.Base.dll
+C:\Users\hp\Desktop\vakifbank-final-case\ECommerce.Schema\bin\Debug\net7.0\ECommerce.Data.dll
+C:\Users\hp\Desktop\vakifbank-final-case\ECommerce.Schema\bin\Debug\net7.0\ECommerce.Data.pdb
+C:\Users\hp\Desktop\vakifbank-final-case\ECommerce.Schema\bin\Debug\net7.0\ECommerce.Base.pdb
+C:\Users\hp\Desktop\vakifbank-final-case\ECommerce.Schema\obj\Debug\net7.0\ECommerce.Schema.csproj.AssemblyReference.cache
+C:\Users\hp\Desktop\vakifbank-final-case\ECommerce.Schema\obj\Debug\net7.0\ECommerce.Schema.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\hp\Desktop\vakifbank-final-case\ECommerce.Schema\obj\Debug\net7.0\ECommerce.Schema.AssemblyInfoInputs.cache
+C:\Users\hp\Desktop\vakifbank-final-case\ECommerce.Schema\obj\Debug\net7.0\ECommerce.Schema.AssemblyInfo.cs
+C:\Users\hp\Desktop\vakifbank-final-case\ECommerce.Schema\obj\Debug\net7.0\ECommerce.Schema.csproj.CoreCompileInputs.cache
+C:\Users\hp\Desktop\vakifbank-final-case\ECommerce.Schema\obj\Debug\net7.0\ECommerce.Schema.csproj.CopyComplete
+C:\Users\hp\Desktop\vakifbank-final-case\ECommerce.Schema\obj\Debug\net7.0\ECommerce.Schema.dll
+C:\Users\hp\Desktop\vakifbank-final-case\ECommerce.Schema\obj\Debug\net7.0\refint\ECommerce.Schema.dll
+C:\Users\hp\Desktop\vakifbank-final-case\ECommerce.Schema\obj\Debug\net7.0\ECommerce.Schema.pdb
+C:\Users\hp\Desktop\vakifbank-final-case\ECommerce.Schema\obj\Debug\net7.0\ref\ECommerce.Schema.dll
