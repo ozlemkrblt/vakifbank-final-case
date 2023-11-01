@@ -1,0 +1,12 @@
+C:\Users\hp\Desktop\vakifbank-final-case\ECommerceSystem\obj\Debug\net6.0\ECommerceWebApi.csproj.AssemblyReference.cache
+C:\Users\hp\Desktop\vakifbank-final-case\ECommerceSystem\obj\Debug\net6.0\ECommerceWebApi.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\hp\Desktop\vakifbank-final-case\ECommerceSystem\obj\Debug\net6.0\ECommerceWebApi.AssemblyInfoInputs.cache
+C:\Users\hp\Desktop\vakifbank-final-case\ECommerceSystem\obj\Debug\net6.0\ECommerceWebApi.AssemblyInfo.cs
+C:\Users\hp\Desktop\vakifbank-final-case\ECommerceSystem\obj\Debug\net6.0\ECommerceWebApi.csproj.CoreCompileInputs.cache
+C:\Users\hp\Desktop\vakifbank-final-case\ECommerceSystem\obj\Debug\net6.0\ECommerceWebApi.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\hp\Desktop\vakifbank-final-case\ECommerceWebApi\obj\Debug\net6.0\ECommerceWebApi.csproj.AssemblyReference.cache
+C:\Users\hp\Desktop\vakifbank-final-case\ECommerceWebApi\obj\Debug\net6.0\ECommerceWebApi.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\hp\Desktop\vakifbank-final-case\ECommerceWebApi\obj\Debug\net6.0\ECommerceWebApi.AssemblyInfoInputs.cache
+C:\Users\hp\Desktop\vakifbank-final-case\ECommerceWebApi\obj\Debug\net6.0\ECommerceWebApi.AssemblyInfo.cs
+C:\Users\hp\Desktop\vakifbank-final-case\ECommerceWebApi\obj\Debug\net6.0\ECommerceWebApi.csproj.CoreCompileInputs.cache
+C:\Users\hp\Desktop\vakifbank-final-case\ECommerceWebApi\obj\Debug\net6.0\ECommerceWebApi.MvcApplicationPartsAssemblyInfo.cache
