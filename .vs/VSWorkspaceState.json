@@ -1,0 +1,12 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\ECommerce.Base",
+    "\\ECommerce.Data",
+    "\\ECommerce.Payment",
+    "\\ECommerceWebApi",
+    "\\ECommerceWebApi\\Properties"
+  ],
+  "SelectedNode": "\\ECommerceWebApi\\Properties",
+  "PreviewInSolutionExplorer": false
+}
