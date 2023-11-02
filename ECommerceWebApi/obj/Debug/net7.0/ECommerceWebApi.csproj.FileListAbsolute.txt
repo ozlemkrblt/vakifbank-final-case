@@ -1,10 +1,3 @@
-C:\Users\hp\Desktop\vakifbank-final-case\ECommerceWebApi\obj\Debug\net7.0\ECommerceWebApi.csproj.AssemblyReference.cache
-C:\Users\hp\Desktop\vakifbank-final-case\ECommerceWebApi\obj\Debug\net7.0\ECommerceWebApi.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\hp\Desktop\vakifbank-final-case\ECommerceWebApi\obj\Debug\net7.0\ECommerceWebApi.AssemblyInfoInputs.cache
-C:\Users\hp\Desktop\vakifbank-final-case\ECommerceWebApi\obj\Debug\net7.0\ECommerceWebApi.AssemblyInfo.cs
-C:\Users\hp\Desktop\vakifbank-final-case\ECommerceWebApi\obj\Debug\net7.0\ECommerceWebApi.csproj.CoreCompileInputs.cache
-C:\Users\hp\Desktop\vakifbank-final-case\ECommerceWebApi\obj\Debug\net7.0\ECommerceWebApi.MvcApplicationPartsAssemblyInfo.cs
-C:\Users\hp\Desktop\vakifbank-final-case\ECommerceWebApi\obj\Debug\net7.0\ECommerceWebApi.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\hp\Desktop\vakifbank-final-case\ECommerceWebApi\bin\Debug\net7.0\appsettings.Development.json
 C:\Users\hp\Desktop\vakifbank-final-case\ECommerceWebApi\bin\Debug\net7.0\appsettings.json
 C:\Users\hp\Desktop\vakifbank-final-case\ECommerceWebApi\bin\Debug\net7.0\ECommerceWebApi.exe
@@ -21,6 +14,7 @@ C:\Users\hp\Desktop\vakifbank-final-case\ECommerceWebApi\bin\Debug\net7.0\Fluent
 C:\Users\hp\Desktop\vakifbank-final-case\ECommerceWebApi\bin\Debug\net7.0\MediatR.dll
 C:\Users\hp\Desktop\vakifbank-final-case\ECommerceWebApi\bin\Debug\net7.0\MediatR.Extensions.Microsoft.DependencyInjection.dll
 C:\Users\hp\Desktop\vakifbank-final-case\ECommerceWebApi\bin\Debug\net7.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\hp\Desktop\vakifbank-final-case\ECommerceWebApi\bin\Debug\net7.0\Microsoft.AspNetCore.OpenApi.dll
 C:\Users\hp\Desktop\vakifbank-final-case\ECommerceWebApi\bin\Debug\net7.0\Microsoft.AspNetCore.Server.Kestrel.Https.dll
 C:\Users\hp\Desktop\vakifbank-final-case\ECommerceWebApi\bin\Debug\net7.0\Microsoft.AspNetCore.Server.Kestrel.Transport.Abstractions.dll
 C:\Users\hp\Desktop\vakifbank-final-case\ECommerceWebApi\bin\Debug\net7.0\Microsoft.Bcl.AsyncInterfaces.dll
@@ -55,6 +49,7 @@ C:\Users\hp\Desktop\vakifbank-final-case\ECommerceWebApi\bin\Debug\net7.0\Serilo
 C:\Users\hp\Desktop\vakifbank-final-case\ECommerceWebApi\bin\Debug\net7.0\Serilog.Sinks.Debug.dll
 C:\Users\hp\Desktop\vakifbank-final-case\ECommerceWebApi\bin\Debug\net7.0\Serilog.Sinks.File.dll
 C:\Users\hp\Desktop\vakifbank-final-case\ECommerceWebApi\bin\Debug\net7.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\hp\Desktop\vakifbank-final-case\ECommerceWebApi\bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\Users\hp\Desktop\vakifbank-final-case\ECommerceWebApi\bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerUI.dll
 C:\Users\hp\Desktop\vakifbank-final-case\ECommerceWebApi\bin\Debug\net7.0\System.Configuration.ConfigurationManager.dll
 C:\Users\hp\Desktop\vakifbank-final-case\ECommerceWebApi\bin\Debug\net7.0\System.Drawing.Common.dll
@@ -84,6 +79,13 @@ C:\Users\hp\Desktop\vakifbank-final-case\ECommerceWebApi\bin\Debug\net7.0\EComme
 C:\Users\hp\Desktop\vakifbank-final-case\ECommerceWebApi\bin\Debug\net7.0\ECommerce.Data.pdb
 C:\Users\hp\Desktop\vakifbank-final-case\ECommerceWebApi\bin\Debug\net7.0\ECommerce.Operation.pdb
 C:\Users\hp\Desktop\vakifbank-final-case\ECommerceWebApi\bin\Debug\net7.0\ECommerce.Schema.pdb
+C:\Users\hp\Desktop\vakifbank-final-case\ECommerceWebApi\obj\Debug\net7.0\ECommerceWebApi.csproj.AssemblyReference.cache
+C:\Users\hp\Desktop\vakifbank-final-case\ECommerceWebApi\obj\Debug\net7.0\ECommerceWebApi.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\hp\Desktop\vakifbank-final-case\ECommerceWebApi\obj\Debug\net7.0\ECommerceWebApi.AssemblyInfoInputs.cache
+C:\Users\hp\Desktop\vakifbank-final-case\ECommerceWebApi\obj\Debug\net7.0\ECommerceWebApi.AssemblyInfo.cs
+C:\Users\hp\Desktop\vakifbank-final-case\ECommerceWebApi\obj\Debug\net7.0\ECommerceWebApi.csproj.CoreCompileInputs.cache
+C:\Users\hp\Desktop\vakifbank-final-case\ECommerceWebApi\obj\Debug\net7.0\ECommerceWebApi.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\hp\Desktop\vakifbank-final-case\ECommerceWebApi\obj\Debug\net7.0\ECommerceWebApi.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\hp\Desktop\vakifbank-final-case\ECommerceWebApi\obj\Debug\net7.0\ECommerceWebApi.RazorTargetAssemblyInfo.cache
 C:\Users\hp\Desktop\vakifbank-final-case\ECommerceWebApi\obj\Debug\net7.0\ECommerceWebApi.csproj.CopyComplete
 C:\Users\hp\Desktop\vakifbank-final-case\ECommerceWebApi\obj\Debug\net7.0\staticwebassets\ECommerceWebApi.StaticWebAssets.Manifest.cache
@@ -93,5 +95,3 @@ C:\Users\hp\Desktop\vakifbank-final-case\ECommerceWebApi\obj\Debug\net7.0\refint
 C:\Users\hp\Desktop\vakifbank-final-case\ECommerceWebApi\obj\Debug\net7.0\ECommerceWebApi.pdb
 C:\Users\hp\Desktop\vakifbank-final-case\ECommerceWebApi\obj\Debug\net7.0\ECommerceWebApi.genruntimeconfig.cache
 C:\Users\hp\Desktop\vakifbank-final-case\ECommerceWebApi\obj\Debug\net7.0\ref\ECommerceWebApi.dll
-C:\Users\hp\Desktop\vakifbank-final-case\ECommerceWebApi\bin\Debug\net7.0\Microsoft.AspNetCore.OpenApi.dll
-C:\Users\hp\Desktop\vakifbank-final-case\ECommerceWebApi\bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerGen.dll

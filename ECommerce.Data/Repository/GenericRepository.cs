@@ -85,19 +85,11 @@ public class GenericRepository<TEntity> : IGenericRepository<TEntity> where TEnt
         return await query.FirstOrDefaultAsync(x => x.Id == id, cancellationToken);
     }
 
-    public void Update(TEntity entity)
+    public void Update(TEntity entity) //update shouldn't be in the repository pattern 
     {
-        var existingEntity = dbContext.Set<TEntity>().Find(entity.Id);
-        if (existingEntity != null)
-        {
-            dbContext.Entry(existingEntity).CurrentValues.SetValues(entity);
-            existingEntity.UpdateDate = DateTime.UtcNow;
-            existingEntity.UpdateUserId = 1;
-            dbContext.Set<TEntity>().Update(existingEntity);
-        }
 
     }
-    public void Insert(TEntity entity)
+    public void Insert(TEntity entity)  
     {
         entity.InsertDate = DateTime.UtcNow;
         entity.InsertUserId = 1;
