@@ -1,0 +1,10 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs/slnx.sqlite
+/.gitignore
+/.gitignore
+/.vs/slnx.sqlite
+/ECommerceWebApi/.vs/ECommerceWebApi/FileContentIndex/19ad52f3-5955-4efa-b42f-34f1bcdeee3f.vsidx
+/ECommerceWebApi/.vs/ECommerceWebApi/FileContentIndex/52501fe6-87fb-4ab3-abe6-8da87ba11bd7.vsidx
