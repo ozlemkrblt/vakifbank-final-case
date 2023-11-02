@@ -8,7 +8,8 @@ public class UserRequest
     public string Email { get; set; }
     public string Password { get; set; }
     public string UserName { get; set; }
-    public virtual List<Role> Roles { get; set; }
+    public int RoleId { get; set; }
+    public virtual Role Role{ get; set; }
 
 }
 
@@ -22,7 +23,7 @@ public class UserResponse
     public string Password { get; set; }
     public string UserName { get; set; }
 
-    public virtual List<Role> Roles { get; set; }
+    public string RoleName { get; set; }
 
     public virtual List<Address> Addresses { get; set; }
 }
