@@ -1,3 +1,9 @@
+C:\Users\hp\Desktop\vakifbank-final-case\ECommerceWebApi\obj\Debug\net7.0\ECommerceWebApi.csproj.AssemblyReference.cache
+C:\Users\hp\Desktop\vakifbank-final-case\ECommerceWebApi\obj\Debug\net7.0\ECommerceWebApi.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\hp\Desktop\vakifbank-final-case\ECommerceWebApi\obj\Debug\net7.0\ECommerceWebApi.AssemblyInfoInputs.cache
+C:\Users\hp\Desktop\vakifbank-final-case\ECommerceWebApi\obj\Debug\net7.0\ECommerceWebApi.AssemblyInfo.cs
+C:\Users\hp\Desktop\vakifbank-final-case\ECommerceWebApi\obj\Debug\net7.0\ECommerceWebApi.csproj.CoreCompileInputs.cache
+C:\Users\hp\Desktop\vakifbank-final-case\ECommerceWebApi\obj\Debug\net7.0\ECommerceWebApi.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\hp\Desktop\vakifbank-final-case\ECommerceWebApi\bin\Debug\net7.0\appsettings.Development.json
 C:\Users\hp\Desktop\vakifbank-final-case\ECommerceWebApi\bin\Debug\net7.0\appsettings.json
 C:\Users\hp\Desktop\vakifbank-final-case\ECommerceWebApi\bin\Debug\net7.0\ECommerceWebApi.exe
@@ -79,13 +85,7 @@ C:\Users\hp\Desktop\vakifbank-final-case\ECommerceWebApi\bin\Debug\net7.0\EComme
 C:\Users\hp\Desktop\vakifbank-final-case\ECommerceWebApi\bin\Debug\net7.0\ECommerce.Data.pdb
 C:\Users\hp\Desktop\vakifbank-final-case\ECommerceWebApi\bin\Debug\net7.0\ECommerce.Operation.pdb
 C:\Users\hp\Desktop\vakifbank-final-case\ECommerceWebApi\bin\Debug\net7.0\ECommerce.Schema.pdb
-C:\Users\hp\Desktop\vakifbank-final-case\ECommerceWebApi\obj\Debug\net7.0\ECommerceWebApi.csproj.AssemblyReference.cache
-C:\Users\hp\Desktop\vakifbank-final-case\ECommerceWebApi\obj\Debug\net7.0\ECommerceWebApi.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\hp\Desktop\vakifbank-final-case\ECommerceWebApi\obj\Debug\net7.0\ECommerceWebApi.AssemblyInfoInputs.cache
-C:\Users\hp\Desktop\vakifbank-final-case\ECommerceWebApi\obj\Debug\net7.0\ECommerceWebApi.AssemblyInfo.cs
-C:\Users\hp\Desktop\vakifbank-final-case\ECommerceWebApi\obj\Debug\net7.0\ECommerceWebApi.csproj.CoreCompileInputs.cache
 C:\Users\hp\Desktop\vakifbank-final-case\ECommerceWebApi\obj\Debug\net7.0\ECommerceWebApi.MvcApplicationPartsAssemblyInfo.cs
-C:\Users\hp\Desktop\vakifbank-final-case\ECommerceWebApi\obj\Debug\net7.0\ECommerceWebApi.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\hp\Desktop\vakifbank-final-case\ECommerceWebApi\obj\Debug\net7.0\ECommerceWebApi.RazorTargetAssemblyInfo.cache
 C:\Users\hp\Desktop\vakifbank-final-case\ECommerceWebApi\obj\Debug\net7.0\ECommerceWebApi.csproj.CopyComplete
 C:\Users\hp\Desktop\vakifbank-final-case\ECommerceWebApi\obj\Debug\net7.0\staticwebassets\ECommerceWebApi.StaticWebAssets.Manifest.cache

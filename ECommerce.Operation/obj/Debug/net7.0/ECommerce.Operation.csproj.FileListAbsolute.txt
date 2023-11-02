@@ -1,3 +1,8 @@
+C:\Users\hp\Desktop\vakifbank-final-case\ECommerce.Operation\obj\Debug\net7.0\ECommerce.Operation.csproj.AssemblyReference.cache
+C:\Users\hp\Desktop\vakifbank-final-case\ECommerce.Operation\obj\Debug\net7.0\ECommerce.Operation.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\hp\Desktop\vakifbank-final-case\ECommerce.Operation\obj\Debug\net7.0\ECommerce.Operation.AssemblyInfoInputs.cache
+C:\Users\hp\Desktop\vakifbank-final-case\ECommerce.Operation\obj\Debug\net7.0\ECommerce.Operation.AssemblyInfo.cs
+C:\Users\hp\Desktop\vakifbank-final-case\ECommerce.Operation\obj\Debug\net7.0\ECommerce.Operation.csproj.CoreCompileInputs.cache
 C:\Users\hp\Desktop\vakifbank-final-case\ECommerce.Operation\bin\Debug\net7.0\ECommerce.Operation.deps.json
 C:\Users\hp\Desktop\vakifbank-final-case\ECommerce.Operation\bin\Debug\net7.0\ECommerce.Operation.dll
 C:\Users\hp\Desktop\vakifbank-final-case\ECommerce.Operation\bin\Debug\net7.0\ECommerce.Operation.pdb
@@ -7,11 +12,6 @@ C:\Users\hp\Desktop\vakifbank-final-case\ECommerce.Operation\bin\Debug\net7.0\EC
 C:\Users\hp\Desktop\vakifbank-final-case\ECommerce.Operation\bin\Debug\net7.0\ECommerce.Schema.pdb
 C:\Users\hp\Desktop\vakifbank-final-case\ECommerce.Operation\bin\Debug\net7.0\ECommerce.Base.pdb
 C:\Users\hp\Desktop\vakifbank-final-case\ECommerce.Operation\bin\Debug\net7.0\ECommerce.Data.pdb
-C:\Users\hp\Desktop\vakifbank-final-case\ECommerce.Operation\obj\Debug\net7.0\ECommerce.Operation.csproj.AssemblyReference.cache
-C:\Users\hp\Desktop\vakifbank-final-case\ECommerce.Operation\obj\Debug\net7.0\ECommerce.Operation.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\hp\Desktop\vakifbank-final-case\ECommerce.Operation\obj\Debug\net7.0\ECommerce.Operation.AssemblyInfoInputs.cache
-C:\Users\hp\Desktop\vakifbank-final-case\ECommerce.Operation\obj\Debug\net7.0\ECommerce.Operation.AssemblyInfo.cs
-C:\Users\hp\Desktop\vakifbank-final-case\ECommerce.Operation\obj\Debug\net7.0\ECommerce.Operation.csproj.CoreCompileInputs.cache
 C:\Users\hp\Desktop\vakifbank-final-case\ECommerce.Operation\obj\Debug\net7.0\ECommerce.Operation.csproj.CopyComplete
 C:\Users\hp\Desktop\vakifbank-final-case\ECommerce.Operation\obj\Debug\net7.0\ECommerce.Operation.dll
 C:\Users\hp\Desktop\vakifbank-final-case\ECommerce.Operation\obj\Debug\net7.0\refint\ECommerce.Operation.dll
