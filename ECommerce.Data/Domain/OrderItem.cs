@@ -9,11 +9,7 @@ public class OrderItem : BaseModel
     public Order Order { get; set; }
     public int ProductId { get; set; }
     public Product Product { get; set; }
-
-    public string ProductName { get; set; } 
-    public string ProductDescription { get; set; }  
-    public double ProductPrice { get; set; }    
-    public int ProductAmount { get; set; }
+    public int ProductQuantity{ get; set; } // how many products 
 
 }
 

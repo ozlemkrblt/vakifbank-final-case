@@ -18,7 +18,7 @@ public class Order : BaseModel
     public int UserId { get; set; }  // one order can belong to one user
     public User User { get; set; }
 
-    public List<OrderItem> Items { get; set; } = new List<OrderItem>();  // one order can contain many orderitems
+    public virtual List<OrderItem> Items { get; set; } = new List<OrderItem>();  // one order can contain many orderitems
 }
 
 public class OrderConfiguration : IEntityTypeConfiguration<Order>
