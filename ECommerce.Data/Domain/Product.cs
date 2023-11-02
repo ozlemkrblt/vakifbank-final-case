@@ -11,7 +11,6 @@ public class Product : BaseModel
     public double Price { get; set; }
     public int Stock { get; set; }
 
-    public List<OrderItem> Items { get; set; } // one product may have multiple orderitems 
 
 }
 
