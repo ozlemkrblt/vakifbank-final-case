@@ -2,16 +2,26 @@
 # This .gitignore file was automatically created by Microsoft(R) Visual Studio.
 ################################################################################
 
+/.vs/slnx.sqlite
+/.gitignore
+/.gitignore
+/.vs/slnx.sqlite
+/ECommerceWebApi/.vs/ECommerceWebApi/FileContentIndex/19ad52f3-5955-4efa-b42f-34f1bcdeee3f.vsidx
+/ECommerceWebApi/.vs/ECommerceWebApi/FileContentIndex/52501fe6-87fb-4ab3-abe6-8da87ba11bd7.vsidx
+/**.vsidx
+/.vs/**.vsidx
+/public/static/**/bin/
 *.vsidx
+/.vs/vakifbank-final-case/FileContentIndex/46ee863d-3595-43b4-ba77-92290d64ee2e.vsidx
+/.vs/vakifbank-final-case/v17/.wsuo
+/ECommerce.Data/bin/Debug/net7.0/ECommerce.Data.dll
+/ECommerce.Data/bin/Debug/net7.0/ECommerce.Data.pdb
+/.vs/VSWorkspaceState.json
+/ECommerce.Data/obj/Debug/net7.0/ref/ECommerce.Data.dll
+/ECommerce.Data/obj/Debug/net7.0/refint/ECommerce.Data.dll
 /ECommerce.Data/obj/Debug/net7.0/ECommerce.Data.csproj.AssemblyReference.cache
-*.BuildWithSkipAnalyzers
-*.targets
 /ECommerce.Operation/obj/Debug/net7.0/ECommerce.Operation.csproj.AssemblyReference.cache
-*.config
-*.v2
 *.txt
 /ECommerceWebApi/.vs/ECommerceWebApi/v17/.suo
 *.bin
 *.dll
-/.vs/slnx.sqlite
-/ECommerceWebApi/obj/Debug/net7.0/ECommerceWebApi.csproj.AssemblyReference.cache

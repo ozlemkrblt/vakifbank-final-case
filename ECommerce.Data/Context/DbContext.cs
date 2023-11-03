@@ -17,6 +17,7 @@ public class ECommerceDbContext : DbContext
         modelBuilder.ApplyConfiguration(new OrderItemConfiguration());
         modelBuilder.ApplyConfiguration(new ProductConfiguration());
         modelBuilder.ApplyConfiguration(new ReceiptConfiguration());
+        modelBuilder.ApplyConfiguration(new ReceiptInfoConfiguration());
         modelBuilder.ApplyConfiguration(new RetailerConfiguration());
         modelBuilder.ApplyConfiguration(new RoleConfiguration());
         modelBuilder.ApplyConfiguration(new UserConfiguration());

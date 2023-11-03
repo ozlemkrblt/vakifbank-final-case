@@ -17,6 +17,8 @@ public interface IUnitofWork
     IGenericRepository<OrderItem> OrderItemRepository { get; }
     IGenericRepository<Product> ProductRepository { get; }
     IGenericRepository<Receipt> ReceiptRepository { get; }
+
+    IGenericRepository<ReceiptInfo> ReceiptInfoRepository { get; }
     IGenericRepository<Retailer> RetailerRepository { get; }
 
     IGenericRepository<Role> RoleRepository { get; }

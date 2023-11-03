@@ -1,16 +1,17 @@
-﻿
-using ECommerce.Data.Domain;
-using Microsoft.EntityFrameworkCore.Metadata.Builders;
+﻿using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using Microsoft.EntityFrameworkCore;
+using System.ComponentModel.DataAnnotations.Schema;
 
-namespace ECommerce.Data.Domain
-{
-    public class Retailer : User
+namespace ECommerce.Data.Domain;
+
+[Table("Retailer", Schema = "dbo")]
+public class Retailer : User
     {
-        public string RetailerName { get; set; }
 
-        public string ReceiptInfo { get; set; }
-        public virtual List<Order> Orders { get; set; } = new List<Order>(); // one seller can order many times
+    //retailer may have multiple receipt infos and choose between them in order process.
+    public virtual List<ReceiptInfo> ReceiptInfos { get; set; } = new List<ReceiptInfo>(); 
+
+    public virtual List<Order> Orders { get; set; } = new List<Order>(); 
 
        // Özel Fiyatlandırma(Kar marjı, anlaşmalı fiyatlar vb.)
 //Açık Hesap Limiti
@@ -20,24 +21,30 @@ namespace ECommerce.Data.Domain
             throw new NotImplementedException();
         }
     }
-}
-
-public class ReceiptInfo
-{
-   // Faturayı düzenleyen kişi/firmanın unvanı, adresi,
-   //public Address RetailerAddress { get; set; }
-//Faturayı düzenleyen kişi / firmanın vergi numarası, mersis numarası
-
-
-
-//Fatura kime kesiliyorsa bahse konu müşterinin unvanı, adresi,
-//Faturanın kesildiği müşterinin vergi dairesi numarası
-
-
-}
 
 public class RetailerConfiguration : IEntityTypeConfiguration<Retailer>
 {
     public void Configure(EntityTypeBuilder<Retailer> builder)
-    { }
+    {
+        builder.Property(x => x.InsertUserId).IsRequired();
+        builder.Property(x => x.UpdateUserId).IsRequired().HasDefaultValue(0);
+        builder.Property(x => x.InsertDate).IsRequired();
+        builder.Property(x => x.UpdateDate).IsRequired(false);
+        builder.Property(x => x.IsActive).IsRequired().HasDefaultValue(true);
+
+        builder.Property(x => x.Id).IsRequired();
+
+        builder.HasMany(x => x.Orders)
+       .WithOne(x => x.Retailer)
+       .HasForeignKey(x => x.RetailerId)
+       .IsRequired(true);
+
+
+        builder.HasMany(x => x.ReceiptInfos)
+            .WithOne(x => x.Retailer)
+            .HasForeignKey(x => x.RetailerId)
+            .IsRequired(true)
+            .OnDelete(DeleteBehavior.Restrict); 
+
+    }
 }

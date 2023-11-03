@@ -11,6 +11,7 @@ public class AddressRequest
 
 public class AddressResponse
 {
+    public int Id { get; set; }
     public int UserId { get; set; }
     public string UserName { get; set; }
     public string AddressLine1 { get; set; }
