@@ -14,7 +14,7 @@ using FluentValidation.AspNetCore;
 using MediatR;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Mvc;
-using ECommerce.Operation.UserOperations.UserCqrs;
+using ECommerce.Operation.UserOperations.Cqrs;
 using Microsoft.Extensions.DependencyInjection;
 using ECommerce.Base.Validator;
 using Microsoft.OpenApi.Models;
@@ -43,84 +43,84 @@ public class Startup
         services.AddDbContext<ECommerceDbContext>(opts => opts.UseSqlServer(connection));
 
         //var JwtConfig = Configuration.GetSection("JwtConfig").Get<JwtConfig>();
-       // services.Configure<JwtConfig>(Configuration.GetSection("JwtConfig"));
+        // services.Configure<JwtConfig>(Configuration.GetSection("JwtConfig"));
 
-        services.AddScoped<IUnitofWork,UnitofWork>();
+        services.AddScoped<IUnitofWork, UnitofWork>();
         services.AddMediatR(typeof(DeleteUserCommand).GetTypeInfo().Assembly);
 
         var config = new MapperConfiguration(cfg => { cfg.AddProfile(new MapperConfig()); });
-       services.AddSingleton(config.CreateMapper());
-       
-       services.AddControllers().AddFluentValidation(x =>
-       {
-           x.RegisterValidatorsFromAssemblyContaining<BaseValidator>();
-       });
-       
-       //services.AddMemoryCache();
-       //
-       //// redis
-       //var redisConfig = new ConfigurationOptions();
-       //redisConfig.EndPoints.Add(Configuration["Redis:Host"], Convert.ToInt32(Configuration["Redis:Port"]));
-       //redisConfig.DefaultDatabase = 0;
-       //services.AddStackExchangeRedisCache(opt =>
-       //{
-       //    opt.ConfigurationOptions = redisConfig;
-       //    opt.InstanceName = Configuration["Redis:InstanceName"];
-       //});
+        services.AddSingleton(config.CreateMapper());
 
-       //services.AddControllersWithViews(options =>
-       //    options.CacheProfiles.Add("Cache100", new CacheProfile
-       //    {
-       //        Duration = 100,
-       //        Location = ResponseCacheLocation.Any,
-       //    }));
-       //
-       services.AddSwaggerGen(c =>
-      {
-          c.SwaggerDoc("v1", new OpenApiInfo { Title = "ECommerce Api Management", Version = "v1.0" });
-          //
-          //    var securityScheme = new OpenApiSecurityScheme
-          //    {
-          //        Name = "VkApi Management for IT Company",
-          //        Description = "Enter JWT Bearer token **_only_**",
-          //        In = ParameterLocation.Header,
-          //        Type = SecuritySchemeType.Http,
-          //        Scheme = "bearer",
-          //        BearerFormat = "JWT",
-          //        Reference = new OpenApiReference
-          //        {
-          //            Id = JwtBearerDefaults.AuthenticationScheme,
-          //            Type = ReferenceType.SecurityScheme
-          //        }
-          //    };
-          //    c.AddSecurityDefinition(securityScheme.Reference.Id, securityScheme);
-          //    c.AddSecurityRequirement(new OpenApiSecurityRequirement
-          //    {
-          //        { securityScheme, new string[] { } }
-          //    });
-          });
-      
-       //
-       //services.AddAuthentication(x =>
-       //{
-       //    x.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
-       //    x.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
-       //}).AddJwtBearer(x =>
-       //{
-       //    x.RequireHttpsMetadata = true;
-       //    x.SaveToken = true;
-       //    x.TokenValidationParameters = new TokenValidationParameters
-       //    {
-       //        ValidateIssuer = true,
-       //        ValidIssuer = JwtConfig.Issuer,
-       //        ValidateIssuerSigningKey = true,
-       //        IssuerSigningKey = new SymmetricSecurityKey(Encoding.ASCII.GetBytes(JwtConfig.Secret)),
-       //        ValidAudience = JwtConfig.Audience,
-       //        ValidateAudience = false,
-       //        ValidateLifetime = true,
-       //        ClockSkew = TimeSpan.FromMinutes(2)
-       //    };
-       //});
+        services.AddControllers().AddFluentValidation(x =>
+        {
+            x.RegisterValidatorsFromAssemblyContaining<BaseValidator>();
+        });
+
+        //services.AddMemoryCache();
+        //
+        //// redis
+        //var redisConfig = new ConfigurationOptions();
+        //redisConfig.EndPoints.Add(Configuration["Redis:Host"], Convert.ToInt32(Configuration["Redis:Port"]));
+        //redisConfig.DefaultDatabase = 0;
+        //services.AddStackExchangeRedisCache(opt =>
+        //{
+        //    opt.ConfigurationOptions = redisConfig;
+        //    opt.InstanceName = Configuration["Redis:InstanceName"];
+        //});
+
+        //services.AddControllersWithViews(options =>
+        //    options.CacheProfiles.Add("Cache100", new CacheProfile
+        //    {
+        //        Duration = 100,
+        //        Location = ResponseCacheLocation.Any,
+        //    }));
+        //
+        services.AddSwaggerGen(c =>
+       {
+           c.SwaggerDoc("v1", new OpenApiInfo { Title = "ECommerce Api Management", Version = "v1.0" });
+           //
+           //    var securityScheme = new OpenApiSecurityScheme
+           //    {
+           //        Name = "VkApi Management for IT Company",
+           //        Description = "Enter JWT Bearer token **_only_**",
+           //        In = ParameterLocation.Header,
+           //        Type = SecuritySchemeType.Http,
+           //        Scheme = "bearer",
+           //        BearerFormat = "JWT",
+           //        Reference = new OpenApiReference
+           //        {
+           //            Id = JwtBearerDefaults.AuthenticationScheme,
+           //            Type = ReferenceType.SecurityScheme
+           //        }
+           //    };
+           //    c.AddSecurityDefinition(securityScheme.Reference.Id, securityScheme);
+           //    c.AddSecurityRequirement(new OpenApiSecurityRequirement
+           //    {
+           //        { securityScheme, new string[] { } }
+           //    });
+       });
+
+        //
+        //services.AddAuthentication(x =>
+        //{
+        //    x.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+        //    x.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+        //}).AddJwtBearer(x =>
+        //{
+        //    x.RequireHttpsMetadata = true;
+        //    x.SaveToken = true;
+        //    x.TokenValidationParameters = new TokenValidationParameters
+        //    {
+        //        ValidateIssuer = true,
+        //        ValidIssuer = JwtConfig.Issuer,
+        //        ValidateIssuerSigningKey = true,
+        //        IssuerSigningKey = new SymmetricSecurityKey(Encoding.ASCII.GetBytes(JwtConfig.Secret)),
+        //        ValidAudience = JwtConfig.Audience,
+        //        ValidateAudience = false,
+        //        ValidateLifetime = true,
+        //        ClockSkew = TimeSpan.FromMinutes(2)
+        //    };
+        //});
     }
 
     // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -134,7 +134,7 @@ public class Startup
         }
 
 
-        //app.UseMiddleware<ErrorHandlerMiddleware>();
+        app.UseMiddleware<ErrorHandlerMiddleware>();
         app.UseMiddleware<HeartBeatMiddleware>();
         Action<RequestProfilerModel> requestResponseHandler = requestProfilerModel =>
         {

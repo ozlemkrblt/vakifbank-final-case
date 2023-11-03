@@ -66,3 +66,10 @@
 /ECommerceWebApi/bin/Debug/net7.0/appsettings.json
 /ECommerceWebApi/bin/Debug/net7.0/ECommerceWebApi.deps.json
 /ECommerce.Operation/bin/Debug/net7.0/ECommerce.Data.pdb
+/ECommerceWebApi/obj/Debug/net7.0/ref/ECommerceWebApi.dll
+/ECommerceWebApi/obj/Debug/net7.0/refint/ECommerceWebApi.dll
+/ECommerceWebApi/obj/Debug/net7.0/ECommerceWebApi.csproj.CoreCompileInputs.cache
+/ECommerceWebApi/obj/Debug/net7.0/ECommerceWebApi.MvcApplicationPartsAssemblyInfo.cs
+/ECommerce.Operation/obj/Release/net7.0/ECommerce.Operation.assets.cache
+/ECommerce.Operation/obj/Release/net7.0/ECommerce.Operation.csproj.AssemblyReference.cache
+/ECommerce.Operation/obj/Debug/net7.0/ECommerce.Operation.csproj.CoreCompileInputs.cache

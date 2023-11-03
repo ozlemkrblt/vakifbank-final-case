@@ -31,7 +31,8 @@ public class MapperConfig : Profile
             .ForMember(dest => dest.ProductName, opt => opt.MapFrom(src => src.Product.Name))
             .ForMember(dest => dest.TotalPrice, opt => opt.MapFrom(src => src.Product.Price * src.ProductQuantity));
 
-        CreateMap<ProductRequest, ProductResponse>();
+        CreateMap<ProductRequest, Product>();
+        CreateMap<Product,ProductResponse>();
 
         CreateMap<ReceiptRequest, Receipt>();
         CreateMap<Receipt, ReceiptResponse>()

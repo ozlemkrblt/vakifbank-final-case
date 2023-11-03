@@ -4,10 +4,9 @@ namespace ECommerce.Schema;
 public class OrderRequest
 {
     public int OrderNo { get; set; }
-    public DateTime OrderDate { get; set; }
     public double Amount { get; set; }
     public double PaymentStatus { get; set; }
-
+    public int? ReceiptId { get; set; }
     public int RetailerId { get; set; }  // one order can belong to one user
 
 }
@@ -21,6 +20,6 @@ public class OrderResponse
     public DateTime OrderDate { get; set; }
     public double Amount { get; set; }
     public double PaymentStatus { get; set; }
-
+    public virtual Receipt Receipt { get; set; }
     public virtual List<OrderItem> Items { get; set; }
 }
