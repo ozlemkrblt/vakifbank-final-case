@@ -1,10 +1,11 @@
 ﻿using ECommerce.Base;
-using ECommerce.Data;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using Microsoft.EntityFrameworkCore;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ECommerce.Data.Domain;
 
+[Table("User", Schema = "dbo")]
 public abstract class User : BaseModel
 {
     public string Name { get; set; }

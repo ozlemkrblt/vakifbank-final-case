@@ -23,7 +23,7 @@ public class MapperConfig : Profile
         CreateMap<OrderRequest, Order>();
         CreateMap<Order, OrderResponse>()
             .ForMember(dest => dest.RetailerUserName,
-                opt => opt.MapFrom(src => src.Retailer.UserName ));
+                opt => opt.MapFrom(src => src.Retailer.UserName));
 
         CreateMap<OrderItemRequest, OrderItem>();
         CreateMap<OrderItem, OrderItemResponse>()
@@ -35,8 +35,9 @@ public class MapperConfig : Profile
 
         CreateMap<ReceiptRequest, Receipt>();
         CreateMap<Receipt, ReceiptResponse>()
-            .ForMember(dest => dest.RetailerUserName, opt => opt.MapFrom(src => src.Retailer.Name))
-            .ForMember(dest => dest.ReceiptInformation, opt => opt.MapFrom(src => src.ReceiptInfo.ToString()));
+            .ForMember(dest => dest.OrderNo, opt => opt.MapFrom(src => src.Order.OrderNo))
+            .ForMember(dest => dest.Amount, opt => opt.MapFrom(src => src.Order.Amount))
+            .ForMember(dest => dest.OrderDate, opt => opt.MapFrom(src => src.Order.OrderDate));
 
         CreateMap<RetailerRequest, RetailerResponse>();
 

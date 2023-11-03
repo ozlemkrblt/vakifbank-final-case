@@ -1,10 +1,11 @@
-﻿
-using ECommerce.Base;
+﻿using ECommerce.Base;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using Microsoft.EntityFrameworkCore;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ECommerce.Data.Domain;
 
+[Table("Address", Schema = "dbo")]
 public class Address : BaseModel
 {
     public int UserId { get; set; }
@@ -34,7 +35,7 @@ public class AddressConfiguration : IEntityTypeConfiguration<Address>
         builder.Property(x => x.District).IsRequired().HasMaxLength(50);
         builder.Property(x => x.PostalCode).IsRequired().HasMaxLength(10);
 
-        builder.HasIndex(x => x.UserId);
+        builder.HasIndex(x => x.UserId).IsUnique(true);
 
 
     }

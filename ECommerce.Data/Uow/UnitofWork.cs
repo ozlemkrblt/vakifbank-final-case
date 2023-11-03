@@ -20,6 +20,7 @@ public class UnitofWork : IUnitofWork
         OrderItemRepository = new GenericRepository<OrderItem>(dbContext);
         ProductRepository = new GenericRepository<Product>(dbContext);
         ReceiptRepository = new GenericRepository<Receipt>(dbContext);
+        ReceiptInfoRepository = new GenericRepository<ReceiptInfo>(dbContext);
         RetailerRepository = new GenericRepository<Retailer>(dbContext);
         RoleRepository = new GenericRepository<Role>(dbContext);
         UserRepository = new GenericRepository<User>(dbContext);
@@ -32,9 +33,10 @@ public class UnitofWork : IUnitofWork
     public IGenericRepository<OrderItem> OrderItemRepository { get; private set; }
     public IGenericRepository<Product> ProductRepository { get; private set; }
     public IGenericRepository<Receipt> ReceiptRepository { get; private set; }
+    public IGenericRepository<ReceiptInfo> ReceiptInfoRepository { get; private set; }
     public IGenericRepository<Retailer> RetailerRepository { get; private set; }
     public IGenericRepository<Role> RoleRepository { get; private set; }
-    public IGenericRepository<User> UserRepository { get; }
+    public IGenericRepository<User> UserRepository { get; private set; }
 
     public void Complete()
     {

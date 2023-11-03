@@ -1,8 +1,11 @@
 ﻿using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using Microsoft.EntityFrameworkCore;
 using ECommerce.Base;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ECommerce.Data.Domain;
+
+[Table("Role", Schema = "dbo")]
 public class Role : BaseModel
 {
     public string Name { get; set; }    
