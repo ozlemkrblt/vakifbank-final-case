@@ -34,3 +34,8 @@
 *.json
 /.gitignore
 /.gitignore
+*.exe
+*.pdb
+*.cs
+*.CopyComplete
+*.editorconfig
