@@ -1,0 +1,17 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+*.vsidx
+/ECommerce.Data/obj/Debug/net7.0/ECommerce.Data.csproj.AssemblyReference.cache
+*.BuildWithSkipAnalyzers
+*.targets
+/ECommerce.Operation/obj/Debug/net7.0/ECommerce.Operation.csproj.AssemblyReference.cache
+*.config
+*.v2
+*.txt
+/ECommerceWebApi/.vs/ECommerceWebApi/v17/.suo
+*.bin
+*.dll
+/.vs/slnx.sqlite
+/ECommerceWebApi/obj/Debug/net7.0/ECommerceWebApi.csproj.AssemblyReference.cache
