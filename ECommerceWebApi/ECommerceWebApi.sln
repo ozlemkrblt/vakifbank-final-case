@@ -11,9 +11,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ECommerce.Data", "..\EComme
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ECommerce.Payment", "..\ECommerce.Payment\ECommerce.Payment.csproj", "{07B6387A-8EC2-4B26-ACE6-281057708EC5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ECommerce.Schema", "..\ECommerce.Schema\ECommerce.Schema.csproj", "{A75EACCB-8A8F-456A-ACD0-20AAC6BE5444}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ECommerce.Schema", "..\ECommerce.Schema\ECommerce.Schema.csproj", "{A75EACCB-8A8F-456A-ACD0-20AAC6BE5444}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ECommerce.Operation", "..\ECommerce.Operation\ECommerce.Operation.csproj", "{80C6811E-F04C-43D7-A01C-460A063AA297}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ECommerce.Operation", "..\ECommerce.Operation\ECommerce.Operation.csproj", "{80C6811E-F04C-43D7-A01C-460A063AA297}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ECommerce.Messaging", "..\ECommerce.Messaging\ECommerce.Messaging.csproj", "{388840FF-6D5D-49C9-BDDF-B6721091E04F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GetMessageExample", "..\GetMessageExample\GetMessageExample.csproj", "{0D457231-955C-4467-A2BF-C3CF98612724}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +49,14 @@ Global
 		{80C6811E-F04C-43D7-A01C-460A063AA297}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{80C6811E-F04C-43D7-A01C-460A063AA297}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{80C6811E-F04C-43D7-A01C-460A063AA297}.Release|Any CPU.Build.0 = Release|Any CPU
+		{388840FF-6D5D-49C9-BDDF-B6721091E04F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{388840FF-6D5D-49C9-BDDF-B6721091E04F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{388840FF-6D5D-49C9-BDDF-B6721091E04F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{388840FF-6D5D-49C9-BDDF-B6721091E04F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0D457231-955C-4467-A2BF-C3CF98612724}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D457231-955C-4467-A2BF-C3CF98612724}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D457231-955C-4467-A2BF-C3CF98612724}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D457231-955C-4467-A2BF-C3CF98612724}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

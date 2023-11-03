@@ -34,3 +34,15 @@
 *.json
 /.gitignore
 /.gitignore
+/ECommerce.Messaging/bin/Debug/net7.0/ECommerce.Messaging.exe
+/ECommerce.Messaging/bin/Debug/net7.0/ECommerce.Messaging.pdb
+/ECommerce.Messaging/obj/Debug/net7.0/.NETCoreApp,Version=v7.0.AssemblyAttributes.cs
+/ECommerce.Messaging/obj/Debug/net7.0/apphost.exe
+/ECommerce.Messaging/obj/Debug/net7.0/ECommerce.Messaging.AssemblyInfo.cs
+/ECommerce.Messaging/obj/Debug/net7.0/ECommerce.Messaging.pdb
+/ECommerce.Messaging/obj/Debug/net7.0/ECommerce.Messaging.csproj.CopyComplete
+/ECommerce.Messaging/obj/Debug/net7.0/ECommerce.Messaging.GeneratedMSBuildEditorConfig.editorconfig
+/ECommerce.Messaging/obj/Debug/net7.0/ECommerce.Messaging.GlobalUsings.g.cs
+/GetMessageExample/bin/Debug/net7.0/GetMessageExample.exe
+/GetMessageExample/bin/Debug/net7.0/GetMessageExample.pdb
+/GetMessageExample/obj/Debug/net7.0/.NETCoreApp,Version=v7.0.AssemblyAttributes.cs
