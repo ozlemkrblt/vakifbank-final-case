@@ -1,5 +1,6 @@
 ﻿using ECommerce.Base.Response;
-using ECommerce.Operation.UserOperations.UserCqrs;
+using ECommerce.Operation.UserOperations.Cqrs;
+using ECommerce.Schema;
 using MediatR;
 //using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -9,21 +10,21 @@ namespace ECommerceWebApi.Controllers;
 
 [Route("vk/api/v1/[controller]")]
 [ApiController]
-public class UsersController : ControllerBase
+public class UserController : ControllerBase
 {
     private IMediator mediator;
 
-    public UsersController(IMediator mediator)
+    public UserController(IMediator mediator)
     {
         this.mediator = mediator;
     }
-/*
+
 
     [HttpGet]
     //[Authorize(Roles = "admin")]
     public async Task<ApiResponse<List<UserResponse>>> GetAll()
     {
-        var operation = new GetAllUserQuery();
+        var operation = new GetAllUsersQuery();
         var result = await mediator.Send(operation);
         return result;
     }
@@ -54,7 +55,7 @@ public class UsersController : ControllerBase
         var result = await mediator.Send(operation);
         return result;
     }
-    */
+
     [HttpDelete("{id}")]
     //[Authorize(Roles = "admin")]
     public async Task<ApiResponse> Delete(int id)
