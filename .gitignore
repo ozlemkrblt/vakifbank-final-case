@@ -46,3 +46,9 @@
 /GetMessageExample/bin/Debug/net7.0/GetMessageExample.exe
 /GetMessageExample/bin/Debug/net7.0/GetMessageExample.pdb
 /GetMessageExample/obj/Debug/net7.0/.NETCoreApp,Version=v7.0.AssemblyAttributes.cs
+*.cs
+*.editorconfig
+*.CopyComplete
+*.exe
+*.pdb
+/.gitignore
