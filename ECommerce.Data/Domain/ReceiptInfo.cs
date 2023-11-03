@@ -1,14 +1,19 @@
 ﻿using ECommerce.Base;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ECommerce.Data.Domain;
+
+[Table("ReceiptInfo", Schema = "dbo")]
 public class ReceiptInfo : BaseModel
 {
 
-    public int RetailerId { get; set; }
-    public Retailer Retailer { get; set; }
+    public int? RetailerId { get; set; }
+    public virtual Retailer Retailer { get; set; }
 
+    public int? ReceiptId { get; set; }
+    public virtual Receipt Receipt { get; set; }
     public int AddressId {  get; set; }
     public Address Address { get; set; }
 
@@ -36,6 +41,8 @@ public class ReceiptInfoConfiguration : IEntityTypeConfiguration<ReceiptInfo>
         builder.Property(x => x.RetailerId).IsRequired(true).HasMaxLength(50);
         builder.Property(x => x.AddressId).IsRequired(true);
         builder.Property(x => x.MersisNo).IsRequired(true).HasMaxLength(20);
+        builder.Property(x => x.ReceiptId).IsRequired(true).HasMaxLength(20);
+
 
 
     }

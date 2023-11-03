@@ -1,9 +1,11 @@
 ﻿using ECommerce.Base;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ECommerce.Data.Domain;
+
+[Table("OrderItem", Schema = "dbo")]
 public class OrderItem : BaseModel
 {
     public int OrderId { get; set; }

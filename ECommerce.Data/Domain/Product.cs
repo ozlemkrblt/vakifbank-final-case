@@ -1,8 +1,11 @@
 ﻿using ECommerce.Base;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ECommerce.Data.Domain;
+
+[Table("Product", Schema = "dbo")]
 public class Product : BaseModel
 {
 

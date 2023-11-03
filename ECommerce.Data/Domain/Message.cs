@@ -1,8 +1,11 @@
 ﻿using ECommerce.Base;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using Microsoft.EntityFrameworkCore;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ECommerce.Data.Domain;
+
+[Table("Message", Schema = "dbo")]
 public class Message : BaseModel
 {
     public int SenderId  { get; set; }
@@ -31,8 +34,20 @@ public class MessageConfiguration : IEntityTypeConfiguration<Message>
         builder.Property(x => x.ReceiverId).IsRequired(true);
         builder.Property(x => x.SenderId).IsRequired(true);
 
+        builder.HasIndex(x =>  x.SenderId).IsUnique();
+        builder.HasIndex(x => x.ReceiverId).IsUnique();
 
-        builder.HasIndex(x => x.ReceiverId).IsUnique(true);
-        builder.HasIndex(x => x.SenderId).IsUnique(true);
+        builder.HasOne(x => x.Sender)
+               .WithMany()
+               .HasForeignKey(x => x.SenderId)
+               .IsRequired()
+               .OnDelete(DeleteBehavior.Restrict); 
+
+        builder.HasOne(x => x.Receiver)
+               .WithMany()
+               .HasForeignKey(x => x.ReceiverId)
+               .IsRequired()
+               .OnDelete(DeleteBehavior.Restrict); 
+
     }
 }

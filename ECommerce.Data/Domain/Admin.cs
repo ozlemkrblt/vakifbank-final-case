@@ -1,9 +1,11 @@
 ﻿
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using Microsoft.EntityFrameworkCore;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ECommerce.Data.Domain;
 
+[Table("Admin", Schema = "dbo")]
 public class Admin : User
 {
 
