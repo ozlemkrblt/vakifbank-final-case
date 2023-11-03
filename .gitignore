@@ -25,3 +25,12 @@
 /ECommerceWebApi/.vs/ECommerceWebApi/v17/.suo
 *.bin
 *.dll
+*.config
+*.v2
+*.targets
+*.cache
+*.BuildWithSkipAnalyzers
+*.props
+*.json
+/.gitignore
+/.gitignore
