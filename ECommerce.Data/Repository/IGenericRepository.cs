@@ -1,5 +1,4 @@
-﻿
-using ECommerce.Base;
+﻿using ECommerce.Base.BaseModel;
 using System.Linq.Expressions;
 
 namespace ECommerce.Data.Repository;
