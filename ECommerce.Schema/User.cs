@@ -9,7 +9,6 @@ public class UserRequest
     public string Password { get; set; }
     public string UserName { get; set; }
     public int RoleId { get; set; }
-    public virtual Role Role{ get; set; }
 
 }
 
