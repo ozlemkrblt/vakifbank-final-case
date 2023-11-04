@@ -8,14 +8,14 @@ using MediatR;
 
 namespace ECommerce.Operation.RoleOperations.Commands.CreateRole;
 
-public class CreateRoleCommandHandler : IRequestHandler<CreateRoleCommand, ApiResponse<RoleResponse>>
+public class CreateTokenCommandHandler : IRequestHandler<CreateRoleCommand, ApiResponse<RoleResponse>>
 {
 
     private readonly ECommerceDbContext dbContext;
     private readonly IMapper mapper;
 
 
-    public CreateRoleCommandHandler(ECommerceDbContext dbContext, IMapper mapper)
+    public CreateTokenCommandHandler(ECommerceDbContext dbContext, IMapper mapper)
     {
         this.dbContext = dbContext;
         this.mapper = mapper;

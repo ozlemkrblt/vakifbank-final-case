@@ -5,6 +5,7 @@ using ECommerce.Data.Domain;
 using ECommerce.Operation.UserOperations.Cqrs;
 using ECommerce.Schema;
 using MediatR;
+using System.Security.Cryptography;
 
 namespace ECommerce.Operation.UserOperations.Commands.CreateUser;
 
@@ -25,13 +26,17 @@ public class CreateAddressCommandHandler : IRequestHandler<CreateUserCommand, Ap
     public async Task<ApiResponse<UserResponse>> Handle(CreateUserCommand request, CancellationToken cancellationToken)
     {
         User mapped = mapper.Map<User>(request.Model);
+        mapped.Password = MD5.Create(request.Model.Password.ToUpper()).ToString();
 
         var entity = await dbContext.Set<User>().AddAsync(mapped, cancellationToken);
         await dbContext.SaveChangesAsync(cancellationToken);
 
         var response = mapper.Map<UserResponse>(entity.Entity);
         return new ApiResponse<UserResponse>(response);
+
     }
 
-}
+    }
+
+
 

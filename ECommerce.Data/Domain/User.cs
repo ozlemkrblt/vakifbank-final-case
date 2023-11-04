@@ -19,6 +19,10 @@ public class User : BaseModel
 
     public virtual List<Address> Addresses { get; set; }
 
+    public DateTime LastActivityDate { get; set; }
+
+    public int PasswordRetryCount { get; set; } 
+
 }
 
 

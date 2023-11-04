@@ -18,11 +18,12 @@ using ECommerce.Operation.UserOperations.Cqrs;
 using Microsoft.Extensions.DependencyInjection;
 using ECommerce.Base.Validator;
 using Microsoft.OpenApi.Models;
-//using Microsoft.IdentityModel.Tokens;
+using Microsoft.IdentityModel.Tokens;
+using ECommerce.Base.JwtToken;
 //using Microsoft.OpenApi.Models;
 //using StackExchange.Redis;
 //using Vk.Base.Logger;
-//using Vk.Base.Token;
+
 //using Vk.Operation.Validation;
 
 namespace ECommerceWebApi;
@@ -42,8 +43,8 @@ public class Startup
         string connection = Configuration.GetConnectionString("MsSqlConnection");
         services.AddDbContext<ECommerceDbContext>(opts => opts.UseSqlServer(connection));
 
-        //var JwtConfig = Configuration.GetSection("JwtConfig").Get<JwtConfig>();
-        // services.Configure<JwtConfig>(Configuration.GetSection("JwtConfig"));
+        var JwtConfig = Configuration.GetSection("JwtConfig").Get<JwtConfig>();
+         services.Configure<JwtConfig>(Configuration.GetSection("JwtConfig"));
 
         services.AddScoped<IUnitofWork, UnitofWork>();
         services.AddMediatR(typeof(DeleteUserCommand).GetTypeInfo().Assembly);
@@ -100,27 +101,27 @@ public class Startup
            //    });
        });
 
-        //
-        //services.AddAuthentication(x =>
-        //{
-        //    x.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
-        //    x.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
-        //}).AddJwtBearer(x =>
-        //{
-        //    x.RequireHttpsMetadata = true;
-        //    x.SaveToken = true;
-        //    x.TokenValidationParameters = new TokenValidationParameters
-        //    {
-        //        ValidateIssuer = true,
-        //        ValidIssuer = JwtConfig.Issuer,
-        //        ValidateIssuerSigningKey = true,
-        //        IssuerSigningKey = new SymmetricSecurityKey(Encoding.ASCII.GetBytes(JwtConfig.Secret)),
-        //        ValidAudience = JwtConfig.Audience,
-        //        ValidateAudience = false,
-        //        ValidateLifetime = true,
-        //        ClockSkew = TimeSpan.FromMinutes(2)
-        //    };
-        //});
+        
+        services.AddAuthentication(x =>
+        {
+            x.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+            x.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+        }).AddJwtBearer(x =>
+        {
+            x.RequireHttpsMetadata = true;
+            x.SaveToken = true;
+            x.TokenValidationParameters = new TokenValidationParameters
+            {
+                ValidateIssuer = true,
+                ValidIssuer = JwtConfig.Issuer,
+                ValidateIssuerSigningKey = true,
+                IssuerSigningKey = new SymmetricSecurityKey(Encoding.ASCII.GetBytes(JwtConfig.Secret)),
+                ValidAudience = JwtConfig.Audience,
+                ValidateAudience = false,
+                ValidateLifetime = true,
+                ClockSkew = TimeSpan.FromMinutes(2)
+            };
+        });
     }
 
     // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
