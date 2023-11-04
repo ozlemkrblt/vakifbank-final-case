@@ -6,7 +6,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace ECommerce.Data.Domain;
 
 [Table("User", Schema = "dbo")]
-public abstract class User : BaseModel
+public class User : BaseModel
 {
     public string Name { get; set; }
     public string LastName { get; set; }
@@ -18,7 +18,6 @@ public abstract class User : BaseModel
     public  Role Role { get; set; }
 
     public virtual List<Address> Addresses { get; set; }
-    public abstract void Login();
 
 }
 

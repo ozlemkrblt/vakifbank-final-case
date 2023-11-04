@@ -9,10 +9,6 @@ namespace ECommerce.Data.Domain;
 public class Admin : User
 {
 
-    public override void Login()
-    {
-        throw new NotImplementedException();
-    }
 }
 
 public class AdminConfiguration : IEntityTypeConfiguration<Admin>
