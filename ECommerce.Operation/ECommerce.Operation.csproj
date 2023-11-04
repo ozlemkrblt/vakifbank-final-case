@@ -16,9 +16,6 @@
     <Folder Include="RetailerOperations\Commands\" />
     <Folder Include="RetailerOperations\Cqrs\" />
     <Folder Include="RetailerOperations\Queries\" />
-    <Folder Include="RoleOperations\Commands\" />
-    <Folder Include="RoleOperations\Cqrs\" />
-    <Folder Include="RoleOperations\Queries\" />
   </ItemGroup>
 
   <ItemGroup>
