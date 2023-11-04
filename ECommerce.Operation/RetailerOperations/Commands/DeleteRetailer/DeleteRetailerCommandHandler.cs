@@ -2,29 +2,29 @@
 using ECommerce.Base.Response;
 using ECommerce.Data.Context;
 using ECommerce.Data.Domain;
-using ECommerce.Operation.OrderOperations.Cqrs;
+using ECommerce.Operation.RetailerOperations.Cqrs;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 
-namespace ECommerce.Operation.OrderOperations.Commands.DeleteOrder;
+namespace ECommerce.Operation.RetailerOperations.Commands.DeleteRetailer;
 
-public class DeleteRoleCommandHandler : IRequestHandler<DeleteOrderCommand, ApiResponse>
+public class DeleteRetailerCommandHandler : IRequestHandler<DeleteRetailerCommand, ApiResponse>
 {
 
     private readonly ECommerceDbContext dbContext;
     private readonly IMapper mapper;
 
 
-    public DeleteRoleCommandHandler(ECommerceDbContext dbContext, IMapper mapper)
+    public DeleteRetailerCommandHandler(ECommerceDbContext dbContext, IMapper mapper)
     {
         this.dbContext = dbContext;
         this.mapper = mapper;
     }
 
 
-    public async Task<ApiResponse> Handle(DeleteOrderCommand request, CancellationToken cancellationToken)
+    public async Task<ApiResponse> Handle(DeleteRetailerCommand request, CancellationToken cancellationToken)
     {
-        var entity = await dbContext.Set<Order>().FirstOrDefaultAsync(x => x.Id == request.Id, cancellationToken);
+        var entity = await dbContext.Set<Retailer>().FirstOrDefaultAsync(x => x.Id == request.Id, cancellationToken);
         if (entity == null)
         {
             return new ApiResponse("Record not found!");

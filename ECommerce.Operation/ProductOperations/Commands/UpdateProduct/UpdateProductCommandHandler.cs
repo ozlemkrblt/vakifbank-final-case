@@ -8,14 +8,14 @@ using Microsoft.EntityFrameworkCore;
 
 namespace ECommerce.Operation.ProductOperations.Commands.UpdateProduct;
 
-public class UpdateProductCommandHandler : IRequestHandler<UpdateProductCommand, ApiResponse>
+public class UpdateRetailerCommandHandler : IRequestHandler<UpdateProductCommand, ApiResponse>
 {
 
     private readonly ECommerceDbContext dbContext;
     private readonly IMapper mapper;
 
 
-    public UpdateProductCommandHandler(ECommerceDbContext dbContext, IMapper mapper)
+    public UpdateRetailerCommandHandler(ECommerceDbContext dbContext, IMapper mapper)
     {
         this.dbContext = dbContext;
         this.mapper = mapper;
