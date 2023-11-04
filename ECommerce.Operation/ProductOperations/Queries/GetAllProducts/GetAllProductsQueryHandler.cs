@@ -8,12 +8,12 @@ using MediatR;
 using Microsoft.EntityFrameworkCore;
 
 namespace ECommerce.Operation.ProductOperations.Queries.GetProductDetails;
-public class GetAllProductsQueryHandler : IRequestHandler<GetAllProductsQuery, ApiResponse<List<ProductResponse>>>
+public class GetAllRetailersQueryHandler : IRequestHandler<GetAllProductsQuery, ApiResponse<List<ProductResponse>>>
 {
 
     private readonly ECommerceDbContext dbContext;
     private readonly IMapper mapper;
-    public GetAllProductsQueryHandler(ECommerceDbContext dbContext, IMapper mapper)
+    public GetAllRetailersQueryHandler(ECommerceDbContext dbContext, IMapper mapper)
     {
         this.dbContext = dbContext;
         this.mapper = mapper;

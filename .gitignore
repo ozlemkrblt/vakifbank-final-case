@@ -1,4 +1,4 @@
-﻿################################################################################
+################################################################################
 # This .gitignore file was automatically created by Microsoft(R) Visual Studio.
 ################################################################################
 
@@ -26,6 +26,38 @@
 *.bin
 *.dll
 *.config
+/ECommerceWebApi/.vs/ECommerceWebApi/DesignTimeBuild/.dtbcache.v2
+/ECommerceWebApi/.vs/ECommerceWebApi/FileContentIndex/7cefe968-7899-4667-aaf0-4a6c72ad53be.vsidx
+/ECommerceWebApi/obj/ECommerceWebApi.csproj.EntityFrameworkCore.targets
+/ECommerceWebApi/obj/ECommerceWebApi.csproj.nuget.dgspec.json
+/ECommerceWebApi/obj/ECommerceWebApi.csproj.nuget.g.props
+/ECommerceWebApi/obj/project.assets.json
+/ECommerceWebApi/obj/project.nuget.cache
+/ECommerceWebApi/obj/Release/net7.0/ECommerceWebApi.assets.cache
+/ECommerceWebApi/bin/Debug/net7.0/ECommerce.Operation.dll
+/ECommerceWebApi/.vs/ProjectEvaluation/ecommercewebapi.metadata.v7.bin
+/ECommerceWebApi/.vs/ProjectEvaluation/ecommercewebapi.projects.v7.bin
+/ECommerceWebApi/.vs/ECommerceWebApi/v17/.futdcache.v2
+/ECommerceWebApi/.vs/ECommerceWebApi/v17/.suo
+/ECommerceWebApi/bin/Debug/net7.0/appsettings.json
+/ECommerceWebApi/bin/Debug/net7.0/ECommerceWebApi.deps.json
+/ECommerce.Operation/bin/Debug/net7.0/ECommerce.Data.pdb
+/ECommerceWebApi/obj/Debug/net7.0/ref/ECommerceWebApi.dll
+/ECommerceWebApi/obj/Debug/net7.0/refint/ECommerceWebApi.dll
+/ECommerceWebApi/obj/Debug/net7.0/ECommerceWebApi.csproj.CoreCompileInputs.cache
+/ECommerceWebApi/obj/Debug/net7.0/ECommerceWebApi.MvcApplicationPartsAssemblyInfo.cs
+/ECommerce.Operation/obj/Release/net7.0/ECommerce.Operation.assets.cache
+/ECommerce.Operation/obj/Release/net7.0/ECommerce.Operation.csproj.AssemblyReference.cache
+/ECommerce.Operation/obj/Debug/net7.0/ECommerce.Operation.csproj.CoreCompileInputs.cache
+*.json
+*.cs
+*.exe
+*.editorconfig
+*.CopyComplete
+*.BuildWithSkipAnalyzers
+*.props
+*.targets
+=======
 *.v2
 *.targets
 *.cache
