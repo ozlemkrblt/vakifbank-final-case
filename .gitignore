@@ -73,3 +73,11 @@
 /ECommerce.Operation/obj/Release/net7.0/ECommerce.Operation.assets.cache
 /ECommerce.Operation/obj/Release/net7.0/ECommerce.Operation.csproj.AssemblyReference.cache
 /ECommerce.Operation/obj/Debug/net7.0/ECommerce.Operation.csproj.CoreCompileInputs.cache
+*.json
+*.cs
+*.exe
+*.editorconfig
+*.CopyComplete
+*.BuildWithSkipAnalyzers
+*.props
+*.targets
