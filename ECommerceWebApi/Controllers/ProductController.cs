@@ -2,7 +2,7 @@
 using ECommerce.Operation.ProductOperations.Cqrs;
 using ECommerce.Schema;
 using MediatR;
-//using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ECommerceWebApi.Controllers;
@@ -21,7 +21,7 @@ public class ProductsController : ControllerBase
 
 
     [HttpGet]
-    //[Authorize(Roles = "admin")]
+    [Authorize(Roles = "admin")]
     public async Task<ApiResponse<List<ProductResponse>>> GetAll()
     {
         var operation = new GetAllProductsQuery();
@@ -30,7 +30,7 @@ public class ProductsController : ControllerBase
     }
 
     [HttpGet("{id}")]
-    //[Authorize(Roles = "admin")]
+    [Authorize(Roles = "admin")]
     public async Task<ApiResponse<ProductResponse>> Get(int id)
     {
         var operation = new GetProductByIdQuery(id);
@@ -39,7 +39,7 @@ public class ProductsController : ControllerBase
     }
 
     [HttpPost]
-    //[Authorize(Roles = "admin")]
+    [Authorize(Roles = "admin")]
     public async Task<ApiResponse<ProductResponse>> Post([FromBody] ProductRequest request)
     {
         var operation = new CreateProductCommand(request);
@@ -57,7 +57,7 @@ public class ProductsController : ControllerBase
     }
 
     [HttpDelete("{id}")]
-    //[Authorize(Roles = "admin")]
+    [Authorize(Roles = "admin")]
     public async Task<ApiResponse> Delete(int id)
     {
         var operation = new DeleteProductCommand(id);

@@ -2,7 +2,7 @@
 using ECommerce.Operation.OrderOperations.Cqrs;
 using ECommerce.Schema;
 using MediatR;
-//using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ECommerceWebApi.Controllers;
@@ -21,7 +21,7 @@ public class OrderController : ControllerBase
 
 
     [HttpGet]
-    //[Authorize(Roles = "admin")]
+    [Authorize(Roles = "admin")]
     public async Task<ApiResponse<List<OrderResponse>>> GetAll()
     {
         var operation = new GetAllOrdersQuery();
@@ -30,7 +30,7 @@ public class OrderController : ControllerBase
     }
 
     [HttpGet("{id}")]
-    //[Authorize(Roles = "admin")]
+    [Authorize(Roles = "admin")]
     public async Task<ApiResponse<OrderResponse>> Get(int id)
     {
         var operation = new GetOrderByIdQuery(id);
@@ -39,7 +39,7 @@ public class OrderController : ControllerBase
     }
 
     [HttpPost]
-    //[Authorize(Roles = "admin")]
+    [Authorize(Roles = "admin")]
     public async Task<ApiResponse<OrderResponse>> Post([FromBody] OrderRequest request)
     {
         var operation = new CreateOrderCommand(request);
@@ -48,7 +48,7 @@ public class OrderController : ControllerBase
     }
 
     [HttpPut("{id}")]
-    //[Authorize(Roles = "admin")]
+    [Authorize(Roles = "admin")]
     public async Task<ApiResponse> Put(int id, [FromBody] OrderRequest request)
     {
         var operation = new UpdateOrderCommand(request, id);
@@ -57,7 +57,7 @@ public class OrderController : ControllerBase
     }
 
     [HttpDelete("{id}")]
-    //[Authorize(Roles = "admin")]
+    [Authorize(Roles = "admin")]
     public async Task<ApiResponse> Delete(int id)
     {
         var operation = new DeleteOrderCommand(id);

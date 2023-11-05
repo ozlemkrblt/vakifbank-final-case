@@ -2,7 +2,7 @@
 using ECommerce.Operation.RetailerOperations.Cqrs;
 using ECommerce.Schema;
 using MediatR;
-//using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ECommerceWebApi.Controllers;

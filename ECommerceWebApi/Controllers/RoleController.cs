@@ -2,7 +2,7 @@
 using ECommerce.Operation.RoleOperations.Cqrs;
 using ECommerce.Schema;
 using MediatR;
-//using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ECommerceWebApi.Controllers;
@@ -21,7 +21,7 @@ public class RoleController : ControllerBase
 
 
     [HttpGet]
-    //[Authorize(Roles = "admin")]
+    [Authorize(Roles = "admin")]
     public async Task<ApiResponse<List<RoleResponse>>> GetAll()
     {
         var operation = new GetAllRolesQuery();
@@ -30,7 +30,7 @@ public class RoleController : ControllerBase
     }
 
     [HttpGet("{id}")]
-    //[Authorize(Roles = "admin")]
+    [Authorize(Roles = "admin")]
     public async Task<ApiResponse<RoleResponse>> Get(int id)
     {
         var operation = new GetRoleByIdQuery(id);
@@ -39,7 +39,7 @@ public class RoleController : ControllerBase
     }
 
     [HttpPost]
-    //[Authorize(Roles = "admin")]
+    [Authorize(Roles = "admin")]
     public async Task<ApiResponse<RoleResponse>> Post([FromBody] RoleRequest request)
     {
         var operation = new CreateRoleCommand(request);
@@ -48,7 +48,7 @@ public class RoleController : ControllerBase
     }
 
     [HttpPut("{id}")]
-    //[Authorize(Roles = "admin")]
+    [Authorize(Roles = "admin")]
     public async Task<ApiResponse> Put(int id, [FromBody] RoleRequest request)
     {
         var operation = new UpdateRoleCommand(request, id);
@@ -57,7 +57,7 @@ public class RoleController : ControllerBase
     }
 
     [HttpDelete("{id}")]
-    //[Authorize(Roles = "admin")]
+    [Authorize(Roles = "admin")]
     public async Task<ApiResponse> Delete(int id)
     {
         var operation = new DeleteRoleCommand(id);

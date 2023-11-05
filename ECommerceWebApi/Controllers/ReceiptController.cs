@@ -2,7 +2,7 @@
 using ECommerce.Operation.ReceiptOperations.Cqrs;
 using ECommerce.Schema;
 using MediatR;
-//using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ECommerceWebApi.Controllers;
@@ -21,7 +21,7 @@ public class ReceiptController : ControllerBase
 
 
     [HttpGet]
-    //[Authorize(Roles = "admin")]
+    [Authorize(Roles = "admin")]
     public async Task<ApiResponse<List<ReceiptResponse>>> GetAll()
     {
         var operation = new GetAllReceiptsQuery();
@@ -30,7 +30,7 @@ public class ReceiptController : ControllerBase
     }
 
     [HttpGet("{id}")]
-    //[Authorize(Roles = "admin")]
+    [Authorize(Roles = "admin")]
     public async Task<ApiResponse<ReceiptResponse>> Get(int id)
     {
         var operation = new GetReceiptByIdQuery(id);
@@ -39,7 +39,7 @@ public class ReceiptController : ControllerBase
     }
 
     [HttpPost]
-    //[Authorize(Roles = "admin")]
+    [Authorize(Roles = "admin")]
     public async Task<ApiResponse<ReceiptResponse>> Post([FromBody] ReceiptRequest request)
     {
         var operation = new CreateReceiptCommand(request);
@@ -48,7 +48,7 @@ public class ReceiptController : ControllerBase
     }
 
     /*[HttpPut("{id}")]
-    //[Authorize(Roles = "admin")]
+    [Authorize(Roles = "admin")]
     public async Task<ApiResponse> Put(int id, [FromBody] ReceiptRequest request)
     {
         var operation = new UpdateReceiptCommand(request, id);
@@ -57,7 +57,7 @@ public class ReceiptController : ControllerBase
     }
     */
     [HttpDelete("{id}")]
-    //[Authorize(Roles = "admin")]
+    [Authorize(Roles = "admin")]
     public async Task<ApiResponse> Delete(int id)
     {
         var operation = new DeleteReceiptCommand(id);
