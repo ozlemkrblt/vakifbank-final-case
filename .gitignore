@@ -75,4 +75,17 @@
 /packages/
 .vscode/
 /.vscode/
+/ECommerceWebApi/obj/Release/net7.0/ECommerceWebApi.csproj.AssemblyReference.cache
+/ECommerce.Data/Migrations/20231102193252_SeedData.cs
+/ECommerce.Data/Migrations/20231102193252_SeedData.Designer.cs
+/ECommerce.Data/Migrations/20231102193319_Initial.cs
+/ECommerce.Data/Migrations/20231102193319_Initial.Designer.cs
+/ECommerce.Data/Migrations/20231102193252_SeedData.cs
+/ECommerce.Data/Migrations/20231102193252_SeedData.Designer.cs
+/ECommerce.Data/Migrations/20231102193319_Initial.cs
+/ECommerce.Data/Migrations/20231102193319_Initial.Designer.cs
+/ECommerce.Data/obj/Release/net7.0/ECommerce.Data.assets.cache
+/ECommerce.Data/obj/Release/net7.0/ECommerce.Data.csproj.AssemblyReference.cache
+/ECommerceWebApi/obj/Release/net7.0/ECommerceWebApi.csproj.AssemblyReference.cache
 *.xml
+
