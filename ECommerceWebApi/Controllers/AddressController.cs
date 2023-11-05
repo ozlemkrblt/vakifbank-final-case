@@ -37,7 +37,7 @@ public class AddressController : ControllerBase
         var result = await mediator.Send(operation);
         return result;
     }
-    [HttpGet("{userid}")]
+    [HttpGet("/UserAdresses/{userid}")]
     //[Authorize(Roles = "admin")]
     public async Task<ApiResponse<List<AddressResponse>>> GetByUserId(int userid)
     {

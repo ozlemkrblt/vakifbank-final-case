@@ -75,3 +75,4 @@
 /packages/
 .vscode/
 /.vscode/
+*.xml
