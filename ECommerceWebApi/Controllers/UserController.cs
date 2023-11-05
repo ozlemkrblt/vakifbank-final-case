@@ -2,7 +2,7 @@
 using ECommerce.Operation.UserOperations.Cqrs;
 using ECommerce.Schema;
 using MediatR;
-//using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ECommerceWebApi.Controllers;
@@ -10,6 +10,7 @@ namespace ECommerceWebApi.Controllers;
 
 [Route("vk/api/v1/[controller]")]
 [ApiController]
+[Authorize]
 public class UserController : ControllerBase
 {
     private IMediator mediator;
@@ -21,7 +22,7 @@ public class UserController : ControllerBase
 
 
     [HttpGet]
-    //[Authorize(Roles = "admin")]
+    [Authorize(Roles = "admin")]
     public async Task<ApiResponse<List<UserResponse>>> GetAll()
     {
         var operation = new GetAllUsersQuery();
@@ -30,7 +31,7 @@ public class UserController : ControllerBase
     }
 
     [HttpGet("{id}")]
-    //[Authorize(Roles = "admin")]
+    [Authorize(Roles = "admin")]
     public async Task<ApiResponse<UserResponse>> Get(int id)
     {
         var operation = new GetUserByIdQuery(id);
@@ -39,7 +40,7 @@ public class UserController : ControllerBase
     }
 
     [HttpPost]
-    //[Authorize(Roles = "admin")]
+    [Authorize(Roles = "admin")]
     public async Task<ApiResponse<UserResponse>> Post([FromBody] UserRequest request)
     {
         var operation = new CreateUserCommand(request);
@@ -48,7 +49,7 @@ public class UserController : ControllerBase
     }
 
     [HttpPut("{id}")]
-    //[Authorize(Roles = "admin")]
+    [Authorize(Roles = "admin")]
     public async Task<ApiResponse> Put(int id, [FromBody] UserRequest request)
     {
         var operation = new UpdateUserCommand(request, id);
@@ -57,7 +58,7 @@ public class UserController : ControllerBase
     }
 
     [HttpDelete("{id}")]
-    //[Authorize(Roles = "admin")]
+    [Authorize(Roles = "admin")]
     public async Task<ApiResponse> Delete(int id)
     {
         var operation = new DeleteUserCommand(id);

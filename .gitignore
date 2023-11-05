@@ -117,3 +117,5 @@
 /ECommerceWebApi/bin/Debug/net7.0/Microsoft.IdentityModel.Abstractions.dll
 /ECommerceWebApi/bin/Debug/net7.0/Microsoft.IdentityModel.JsonWebTokens.dll
 /ECommerceWebApi/bin/Debug/net7.0/Microsoft.IdentityModel.Logging.dll
+/ECommerce.Schema/obj/Release/net7.0/ECommerce.Schema.assets.cache
+/ECommerce.Schema/obj/Release/net7.0/ECommerce.Schema.csproj.AssemblyReference.cache
