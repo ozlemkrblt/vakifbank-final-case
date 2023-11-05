@@ -13,7 +13,8 @@ public class MapperConfig : Profile
             .ForMember(dest => dest.UserName,
                 opt => opt.MapFrom(src => src.User.UserName));
 
-        CreateMap<AdminRequest, AdminResponse>();
+        CreateMap<AdminRequest, Admin>();
+        CreateMap<Admin, AdminResponse>();
 
         CreateMap<MessageRequest, Message>();
         CreateMap<Message, MessageResponse>()
@@ -40,9 +41,11 @@ public class MapperConfig : Profile
             .ForMember(dest => dest.Amount, opt => opt.MapFrom(src => src.Order.Amount))
             .ForMember(dest => dest.OrderDate, opt => opt.MapFrom(src => src.Order.OrderDate));
 
-        CreateMap<RetailerRequest, RetailerResponse>();
+        CreateMap<RetailerRequest, Retailer>();
+        CreateMap<Retailer, RetailerResponse>();
 
-        CreateMap<RoleRequest, RoleResponse>();
+        CreateMap<RoleRequest, Role>();
+        CreateMap<Role, RoleResponse>();
 
         CreateMap<UserRequest, User>();
         CreateMap<User, UserResponse>()

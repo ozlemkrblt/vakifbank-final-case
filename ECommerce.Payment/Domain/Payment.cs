@@ -1,4 +1,4 @@
-﻿using ECommerce.Base;
+﻿using ECommerce.Base.BaseModel;
 
 namespace ECommerce.Payment.Domain;
 

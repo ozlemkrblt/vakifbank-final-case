@@ -6,21 +6,17 @@ namespace ECommerce.Data.Domain;
 
 [Table("Retailer", Schema = "dbo")]
 public class Retailer : User
-    {
+{
 
     //retailer may have multiple receipt infos and choose between them in order process.
-    public virtual List<ReceiptInfo> ReceiptInfos { get; set; } = new List<ReceiptInfo>(); 
+    public virtual List<ReceiptInfo> ReceiptInfos { get; set; } = new List<ReceiptInfo>();
 
-    public virtual List<Order> Orders { get; set; } = new List<Order>(); 
+    public virtual List<Order> Orders { get; set; } = new List<Order>();
 
-       // Özel Fiyatlandırma(Kar marjı, anlaşmalı fiyatlar vb.)
-//Açık Hesap Limiti
+    // Özel Fiyatlandırma(Kar marjı, anlaşmalı fiyatlar vb.)
+    //Açık Hesap Limiti
 
-        public override void Login()
-        {
-            throw new NotImplementedException();
-        }
-    }
+}
 
 public class RetailerConfiguration : IEntityTypeConfiguration<Retailer>
 {
@@ -44,7 +40,7 @@ public class RetailerConfiguration : IEntityTypeConfiguration<Retailer>
             .WithOne(x => x.Retailer)
             .HasForeignKey(x => x.RetailerId)
             .IsRequired(true)
-            .OnDelete(DeleteBehavior.Restrict); 
+            .OnDelete(DeleteBehavior.Restrict);
 
     }
 }
