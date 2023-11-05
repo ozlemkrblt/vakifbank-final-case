@@ -1,5 +1,5 @@
 ﻿using ECommerce.Data.Repository;
-using ECommerce.Base;
+using ECommerce.Base.BaseModel;
 using Microsoft.EntityFrameworkCore;
 using System.Linq.Expressions;
 using ECommerce.Data.Context;

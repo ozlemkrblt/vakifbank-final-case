@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using Microsoft.EntityFrameworkCore;
-using ECommerce.Base;
+using ECommerce.Base.BaseModel;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ECommerce.Data.Domain;
