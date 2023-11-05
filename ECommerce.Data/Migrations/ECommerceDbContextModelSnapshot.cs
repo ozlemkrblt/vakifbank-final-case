@@ -79,8 +79,7 @@ namespace ECommerce.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("UserId")
-                        .IsUnique();
+                    b.HasIndex("UserId");
 
                     b.ToTable("Address", "dbo");
                 });
@@ -485,7 +484,9 @@ namespace ECommerce.Data.Migrations
                         .HasColumnType("nvarchar(50)");
 
                     b.Property<int>("PasswordRetryCount")
-                        .HasColumnType("int");
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasDefaultValue(0);
 
                     b.Property<int>("RoleId")
                         .HasColumnType("int");

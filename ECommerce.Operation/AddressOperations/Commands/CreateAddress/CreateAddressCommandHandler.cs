@@ -5,6 +5,8 @@ using ECommerce.Data.Domain;
 using ECommerce.Operation.AddressOperations.Cqrs;
 using ECommerce.Schema;
 using MediatR;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Infrastructure;
 
 namespace ECommerce.Operation.AddressOperations.Commands.CreateAddress;
 
@@ -24,6 +26,15 @@ public class CreateAddressCommandHandler : IRequestHandler<CreateAddressCommand,
 
     public async Task<ApiResponse<AddressResponse>> Handle(CreateAddressCommand request, CancellationToken cancellationToken)
     {
+
+        var existingUser = await dbContext.Set<User>().FirstOrDefaultAsync(x=> x.Id == request.Model.UserId , cancellationToken);
+
+        if (existingUser == null)
+        {
+            return new ApiResponse<AddressResponse>("Invalid operation : You must insert an address for a existing user." );
+
+        }
+
         Address mapped = mapper.Map<Address>(request.Model);
 
         var entity = await dbContext.Set<Address>().AddAsync(mapped, cancellationToken);

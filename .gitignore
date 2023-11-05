@@ -87,3 +87,5 @@
 /ECommerce.Data/obj/Release/net7.0/ECommerce.Data.assets.cache
 /ECommerce.Data/obj/Release/net7.0/ECommerce.Data.csproj.AssemblyReference.cache
 /ECommerceWebApi/obj/Release/net7.0/ECommerceWebApi.csproj.AssemblyReference.cache
+*.xml
+

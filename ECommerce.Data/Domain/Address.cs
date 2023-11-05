@@ -11,7 +11,6 @@ public class Address : BaseModel
 {
     public int UserId { get; set; }
     public virtual User User { get; set; }
-
     public string AddressLine1 { get; set; }
     public string AddressLine2 { get; set; }
     public string City { get; set; }
@@ -35,8 +34,6 @@ public class AddressConfiguration : IEntityTypeConfiguration<Address>
         builder.Property(x => x.City).IsRequired().HasMaxLength(50);
         builder.Property(x => x.District).IsRequired().HasMaxLength(50);
         builder.Property(x => x.PostalCode).IsRequired().HasMaxLength(10);
-
-        builder.HasIndex(x => x.UserId).IsUnique(true);
 
 
     }
