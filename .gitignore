@@ -81,3 +81,11 @@
 *.BuildWithSkipAnalyzers
 *.props
 *.targets
+/ECommerceWebApi/bin/Debug/net7.0/ECommerce.Base.dll
+/ECommerceWebApi/bin/Debug/net7.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll
+/ECommerceWebApi/bin/Debug/net7.0/Microsoft.IdentityModel.Logging.dll
+/ECommerceWebApi/bin/Debug/net7.0/Microsoft.IdentityModel.JsonWebTokens.dll
+/ECommerceWebApi/bin/Debug/net7.0/System.IdentityModel.Tokens.Jwt.dll
+/ECommerceWebApi/bin/Debug/net7.0/Microsoft.IdentityModel.Tokens.dll
+*.log 
+*.dll
