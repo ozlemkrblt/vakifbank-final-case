@@ -12,4 +12,5 @@ namespace ECommerce.Operation.AddressOperations.Cqrs;
     public record GetAllAddressesQuery() : IRequest<ApiResponse<List<AddressResponse>>>;
     public record GetAddressByIdQuery(int Id) : IRequest<ApiResponse<AddressResponse>>;
 
+    public record GetAddressesByUserIdQuery(int UserId) : IRequest<ApiResponse<List<AddressResponse>>>;
 
