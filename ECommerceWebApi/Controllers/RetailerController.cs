@@ -47,7 +47,7 @@ public class RetailerController : ControllerBase
         return result;
     }
 
-    [HttpPut("{id}")]
+ /*   [HttpPut("{id}")]
     //[Authorize(Retailers = "admin")]
     public async Task<ApiResponse> Put(int id, [FromBody] RetailerRequest request)
     {
@@ -55,6 +55,7 @@ public class RetailerController : ControllerBase
         var result = await mediator.Send(operation);
         return result;
     }
+ */
 
     [HttpDelete("{id}")]
     //[Authorize(Retailers = "admin")]

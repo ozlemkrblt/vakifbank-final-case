@@ -23,7 +23,7 @@ public class GetAllRetailersQueryHandler : IRequestHandler<GetAllRetailersQuery,
     public async Task<ApiResponse<List<RetailerResponse>>> Handle(GetAllRetailersQuery request,
         CancellationToken cancellationToken)
     {
-        List<Retailer> list = await dbContext.Set<Retailer>().
+        List<Retailer> list = await dbContext.Set<Retailer>()
             .ToListAsync(cancellationToken);
 
         List<RetailerResponse> mapped = mapper.Map<List<RetailerResponse>>(list);

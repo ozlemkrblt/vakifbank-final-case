@@ -1,8 +1,8 @@
 ﻿using ECommerce.Data.Repository;
-using ECommerce.Base.BaseModel;
 using Microsoft.EntityFrameworkCore;
 using System.Linq.Expressions;
 using ECommerce.Data.Context;
+using ECommerce.Base.BaseModel;
 
 namespace ECommerce.Data.Repository;
 

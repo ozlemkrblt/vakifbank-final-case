@@ -1,12 +1,12 @@
-﻿using ECommerce.Base.BaseModel;
-using Microsoft.EntityFrameworkCore.Metadata.Builders;
+﻿using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations.Schema;
+using ECommerce.Base.BaseModel;
 
 namespace ECommerce.Data.Domain;
 
 [Table("User", Schema = "dbo")]
-public abstract class User : BaseModel
+public class User : BaseModel
 {
     public string Name { get; set; }
     public string LastName { get; set; }
@@ -15,10 +15,13 @@ public abstract class User : BaseModel
     public string UserName { get; set; }
     
     public int RoleId { get; set; }
-    public  Role Role { get; set; }
+    public  virtual Role Role { get; set; }
 
     public virtual List<Address> Addresses { get; set; }
-    public abstract void Login();
+
+    public DateTime LastActivityDate { get; set; }
+
+    public int PasswordRetryCount { get; set; } 
 
 }
 
@@ -41,8 +44,8 @@ public class UserConfiguration : IEntityTypeConfiguration<User>
         builder.Property(x => x.LastName).IsRequired().HasMaxLength(50);
         builder.Property(x => x.UserName).IsRequired(true).HasMaxLength(10);
         builder.Property(x => x.RoleId).IsRequired(true);
-        // builder.Property(x => x.LastActivityDate).IsRequired();
-        //builder.Property(x => x.PasswordRetryCount).IsRequired().HasDefaultValue(0);
+        builder.Property(x => x.LastActivityDate).IsRequired();
+        builder.Property(x => x.PasswordRetryCount).IsRequired().HasDefaultValue(0);
 
         builder.HasIndex(x => x.Id).IsUnique(true);
         builder.HasIndex(x => x.Email).IsUnique(true);
