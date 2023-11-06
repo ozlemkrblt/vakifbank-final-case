@@ -17,6 +17,6 @@ public class ReceiptResponse
     public DateTime OrderDate { get; set; }
     //public int PaymentId { get; set; }
     public int ReceiptInfoId { get; set; }
-    public ReceiptInfo ReceiptInfo { get; set; }
+    public string ReceiptInfo { get; set; }
 
 }

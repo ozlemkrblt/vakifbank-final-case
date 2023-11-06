@@ -7,7 +7,7 @@ namespace ECommerce.Data.Domain;
 [Table("Retailer", Schema = "dbo")]
 public class Retailer : User
 {
-
+    
     //retailer may have multiple receipt infos and choose between them in order process.
     public virtual List<ReceiptInfo> ReceiptInfos { get; set; } = new List<ReceiptInfo>();
 

@@ -8,7 +8,7 @@ namespace ECommerce.Data.Domain;
 [Table("ReceiptInfo", Schema = "dbo")]
 public class ReceiptInfo : BaseModel
 {
-
+    public string CompanyName { get; set; }
     public int? RetailerId { get; set; }
     public virtual Retailer Retailer { get; set; }
 
@@ -41,9 +41,8 @@ public class ReceiptInfoConfiguration : IEntityTypeConfiguration<ReceiptInfo>
         builder.Property(x => x.RetailerId).IsRequired(true).HasMaxLength(50);
         builder.Property(x => x.AddressId).IsRequired(true);
         builder.Property(x => x.MersisNo).IsRequired(true).HasMaxLength(20);
-        builder.Property(x => x.ReceiptId).IsRequired(true).HasMaxLength(20);
-
-
+        builder.Property(x => x.ReceiptId).HasDefaultValue(0).HasMaxLength(20);
+        builder.Property(x => x.CompanyName).IsRequired(true).HasMaxLength(50);
 
     }
 }

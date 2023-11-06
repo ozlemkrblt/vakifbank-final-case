@@ -10,9 +10,6 @@
     <Folder Include="MessageOperations\Commands\" />
     <Folder Include="MessageOperations\Cqrs\" />
     <Folder Include="MessageOperations\Queries\" />
-    <Folder Include="ReceiptOperations\Commands\" />
-    <Folder Include="ReceiptOperations\Cqrs\" />
-    <Folder Include="ReceiptOperations\Queries\" />
     <Folder Include="RetailerOperations\Commands\" />
     <Folder Include="RetailerOperations\Cqrs\" />
     <Folder Include="RetailerOperations\Queries\" />

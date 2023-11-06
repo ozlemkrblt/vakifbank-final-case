@@ -37,13 +37,10 @@ public class OrderConfiguration : IEntityTypeConfiguration<Order>
         builder.Property(x => x.OrderDate).IsRequired(true);
         //builder.HasCheckConstraint("CK_OrderDate_NotInFuture", "OrderDate <= SYSDATETIME()");
         builder.Property(x => x.RetailerId).IsRequired().HasMaxLength(20);
-        builder.Property(x => x.ReceiptId).IsRequired(true).HasMaxLength(20);
+        builder.Property(x => x.ReceiptId).HasMaxLength(20);
         builder.Property(x => x.Amount).IsRequired().HasPrecision(20,2);
         builder.Property(x => x.PaymentStatus).IsRequired().HasMaxLength(20);
 
-
-
-        builder.HasIndex(x => x.ReceiptId).IsUnique(true);
         builder.HasIndex(x => x.RetailerId).IsUnique(true);
         builder.HasIndex(x => x.OrderNo).IsUnique(true);
         builder.HasIndex(x => x.Id).IsUnique(true);

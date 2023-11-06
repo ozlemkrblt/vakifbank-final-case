@@ -35,13 +35,10 @@ public class ReceiptConfiguration : IEntityTypeConfiguration<Receipt>
         builder.Property(x => x.ReceiptInfoId).IsRequired(true);
         builder.Property(x => x.OrderId).IsRequired().HasMaxLength(10);
 
-
-        builder.HasIndex(x => x.ReceiptInfoId).IsUnique(true);
         builder.HasIndex(x => x.OrderId).IsUnique(true);
 
         builder.HasOne(x => x.ReceiptInfo)
         .WithOne(x => x.Receipt)
-        .HasForeignKey<ReceiptInfo>(x=> x.ReceiptId).IsRequired(true)
-        .IsRequired(true).OnDelete(DeleteBehavior.NoAction); ;
+        .HasForeignKey<ReceiptInfo>(x=> x.ReceiptId).IsRequired(false).OnDelete(DeleteBehavior.NoAction);
     }
 }

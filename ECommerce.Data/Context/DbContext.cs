@@ -10,6 +10,7 @@ public class ECommerceDbContext : DbContext
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
+        modelBuilder.Entity<User>().UseTptMappingStrategy();
         modelBuilder.ApplyConfiguration(new AddressConfiguration ());
         modelBuilder.ApplyConfiguration(new AdminConfiguration());
         modelBuilder.ApplyConfiguration(new MessageConfiguration());

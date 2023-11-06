@@ -7,27 +7,47 @@ namespace YourNamespace.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.Sql(@"
-                -- Seed data for User table
-                INSERT INTO [dbo].[Role] ([Id], [Name],[InsertUserId] ,[InsertDate] ,[UpdateUserId] ,[UpdateDate] ,[IsActive])
+
+
+                -- Seed data for Role table
+SET IDENTITY_INSERT [dbo].[Role] ON;
+                INSERT INTO [dbo].[Role] ([Id], [Name] ,[InsertUserId] ,[InsertDate] ,[UpdateUserId] ,[UpdateDate] ,[IsActive])
                 VALUES (1, 'admin',1,'2023-05-05',0,null,1),
                        (2, 'retailer',1,'2023-05-05',0,null,1);
+SET IDENTITY_INSERT [dbo].[Role] OFF;
 
-                INSERT INTO [dbo].[Address] ([Id], [UserId], [AddressLine1], [AddressLine2], [City] , [District] , [PostalCode],[InsertUserId] ,[InsertDate] ,[UpdateUserId] ,[UpdateDate] ,[IsActive])
-                VALUES (1,2001, '123 Main St, Good Boulevard', 'Number 18,Flat Number 3','Berlin', 'Center', 10117,1,'2023-05-05',0,null,1);
 
 
                 -- Seed data for User table
-                INSERT INTO [dbo].[User]([Id],[Email] ,[Password] ,[Name] ,[LastName] ,[RoleId] ,[UserName],[LastActivityDate] ,[PasswordRetryCount] ,[InsertUserId] ,[InsertDate] ,[UpdateUserId] ,[UpdateDate] ,[IsActive])
-                VALUES (10001 ,'admin1@example.com' ,'12345' ,'Admin1' ,'Lucky' ,'1', 'AdMin1','2023-07-07' ,0 ,0 ,'2023-07-07' ,0 ,'2023-07-07' ,1),
-                VALUES (20001 ,'retailer1@example.com' ,'12345' ,'Retailer1' ,'Successful' ,'2' 'RetaiLeR1','2023-07-07' ,0 ,0 ,'2023-07-07' ,0 ,'2023-07-07' ,1);
+SET IDENTITY_INSERT [dbo].[User] ON;
+                INSERT INTO [dbo].[User]([Id],[Email] ,[Password] ,[Name] ,[LastName] ,[RoleId] ,[UserName] ,[LastActivityDate] ,[PasswordRetryCount] ,[InsertUserId] ,[InsertDate] ,[UpdateUserId] ,[UpdateDate] ,[IsActive])
+                VALUES (10001 ,'admin1@example.com' ,'12345' ,'Admin1' ,'Lucky' ,'1', 'AdMin1' ,'2023-07-07' ,0 ,0 ,'2023-07-07' ,0 ,'2023-07-07' ,1),
+                       (20001 ,'retailer1@example.com' ,'12345' ,'Retailer1' ,'Successful' ,'2' , 'RetaiLeR1','2023-07-07' ,0 ,0 ,'2023-07-07' ,0 ,'2023-07-07' ,1);
+SET IDENTITY_INSERT [dbo].[User] OFF;
+
+--Seed data for Address table
+SET IDENTITY_INSERT [dbo].[Address] ON;
+                INSERT INTO [dbo].[Address] ([Id], [UserId], [AddressLine1], [AddressLine2], [City] , [District] , [PostalCode],[InsertUserId] ,[InsertDate] ,[UpdateUserId] ,[UpdateDate] ,[IsActive])
+                VALUES (1,20001, '123 Main St, Good Boulevard', 'Number 18,Flat Number 3','Berlin', 'Center', 10117 ,1,'2023-05-05',0,null,1);
+SET IDENTITY_INSERT [dbo].[Address] OFF;
+
                 -- Seed data for Admin table
-                INSERT INTO [dbo].[Admin] ([Id],[LastActivityDate] ,[PasswordRetryCount] ,[InsertUserId] ,[InsertDate] ,[UpdateUserId] ,[UpdateDate] ,[IsActive])
-                VALUES (10001,'2023-07-07' ,0 ,0 ,'2023-07-07' ,0 ,'2023-07-07' ,1);
+--SET IDENTITY_INSERT [dbo].[Admin] ON;
+               -- INSERT INTO [dbo].[Admin] ([Id])
+--,[LastActivityDate] ,[PasswordRetryCount] ,[InsertUserId] ,[InsertDate] ,[UpdateUserId] ,[UpdateDate] ,[IsActive])
+               -- VALUES (10001);
+--,'2023-07-07' ,0 ,0 ,'2023-07-07' ,0 ,'2023-07-07' ,1);
+--SET IDENTITY_INSERT [dbo].[Admin] OFF;
+
+
 
                 -- Seed data for Retailer table
-                INSERT INTO [dbo].[Retailer] ([Id],[LastActivityDate] ,[PasswordRetryCount] ,[InsertUserId] ,[InsertDate] ,[UpdateUserId] ,[UpdateDate] ,[IsActive])
-                VALUES (20001,'2023-07-07' ,0 ,0 ,'2023-07-07' ,0 ,'2023-07-07' ,1);
-
+--SET IDENTITY_INSERT [dbo].[Retailer] ON;
+                --INSERT INTO [dbo].[Retailer] ([Id])
+--,[LastActivityDate] ,[PasswordRetryCount] ,[InsertUserId] ,[InsertDate] ,[UpdateUserId] ,[UpdateDate] ,[IsActive])
+               -- VALUES (20001);
+---,'2023-07-07' ,0 ,0 ,'2023-07-07' ,0 ,'2023-07-07' ,1);
+--SET IDENTITY_INSERT [dbo].[Retailer] OFF;
             ");
         }
 

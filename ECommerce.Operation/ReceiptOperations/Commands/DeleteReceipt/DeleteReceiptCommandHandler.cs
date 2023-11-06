@@ -6,16 +6,16 @@ using ECommerce.Operation.ReceiptOperations.Cqrs;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 
-namespace ECommerce.Operation.ReceiptOperations.Commands.DeleteReceipt;
+namespace ECommerce.Operation.ReceiptOperations.Commands.DeleteReceiptInfo;
 
-public class DeleteRoleCommandHandler : IRequestHandler<DeleteReceiptCommand, ApiResponse>
+public class DeleteReceiptCommandHandler : IRequestHandler<DeleteReceiptCommand, ApiResponse>
 {
 
     private readonly ECommerceDbContext dbContext;
     private readonly IMapper mapper;
 
 
-    public DeleteRoleCommandHandler(ECommerceDbContext dbContext, IMapper mapper)
+    public DeleteReceiptCommandHandler(ECommerceDbContext dbContext, IMapper mapper)
     {
         this.dbContext = dbContext;
         this.mapper = mapper;

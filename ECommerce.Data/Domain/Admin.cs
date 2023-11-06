@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Reflection.Emit;
 
 namespace ECommerce.Data.Domain;
 
@@ -22,5 +23,6 @@ public class AdminConfiguration : IEntityTypeConfiguration<Admin>
 
         builder.Property(x => x.Id).IsRequired(true);
         builder.Property(x => x.Name).IsRequired().HasMaxLength(20);
+
     }
 }

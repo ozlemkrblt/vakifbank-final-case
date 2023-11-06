@@ -169,7 +169,6 @@ namespace ECommerce.Data.Migrations
                         .HasColumnType("float");
 
                     b.Property<int?>("ReceiptId")
-                        .IsRequired()
                         .HasMaxLength(20)
                         .HasColumnType("int");
 
@@ -191,9 +190,6 @@ namespace ECommerce.Data.Migrations
                         .IsUnique();
 
                     b.HasIndex("OrderNo")
-                        .IsUnique();
-
-                    b.HasIndex("ReceiptId")
                         .IsUnique();
 
                     b.HasIndex("RetailerId")
@@ -342,9 +338,6 @@ namespace ECommerce.Data.Migrations
                     b.HasIndex("OrderId")
                         .IsUnique();
 
-                    b.HasIndex("ReceiptInfoId")
-                        .IsUnique();
-
                     b.ToTable("Receipt", "dbo");
                 });
 
@@ -358,6 +351,11 @@ namespace ECommerce.Data.Migrations
 
                     b.Property<int>("AddressId")
                         .HasColumnType("int");
+
+                    b.Property<string>("CompanyName")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
 
                     b.Property<DateTime>("InsertDate")
                         .HasColumnType("datetime2");
@@ -375,9 +373,10 @@ namespace ECommerce.Data.Migrations
                         .HasColumnType("int");
 
                     b.Property<int?>("ReceiptId")
-                        .IsRequired()
+                        .ValueGeneratedOnAdd()
                         .HasMaxLength(20)
-                        .HasColumnType("int");
+                        .HasColumnType("int")
+                        .HasDefaultValue(0);
 
                     b.Property<int?>("RetailerId")
                         .IsRequired()
@@ -397,7 +396,8 @@ namespace ECommerce.Data.Migrations
                     b.HasIndex("AddressId");
 
                     b.HasIndex("ReceiptId")
-                        .IsUnique();
+                        .IsUnique()
+                        .HasFilter("[ReceiptId] IS NOT NULL");
 
                     b.HasIndex("RetailerId");
 
@@ -618,8 +618,7 @@ namespace ECommerce.Data.Migrations
                     b.HasOne("ECommerce.Data.Domain.Receipt", "Receipt")
                         .WithOne("ReceiptInfo")
                         .HasForeignKey("ECommerce.Data.Domain.ReceiptInfo", "ReceiptId")
-                        .OnDelete(DeleteBehavior.NoAction)
-                        .IsRequired();
+                        .OnDelete(DeleteBehavior.NoAction);
 
                     b.HasOne("ECommerce.Data.Domain.Retailer", "Retailer")
                         .WithMany("ReceiptInfos")
