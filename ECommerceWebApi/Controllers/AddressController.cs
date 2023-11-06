@@ -39,7 +39,7 @@ public class AddressController : ControllerBase
     }
 
     [Authorize(Roles = "admin,retailer")]
-    [HttpGet("/UserAdresses/{userid}")]
+    [HttpGet("/UserAddresses/{userid}")]
     [Authorize(Roles = "admin,retailer")]
     public async Task<ApiResponse<List<AddressResponse>>> GetByUserId(int userid)
     {
