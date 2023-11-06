@@ -10,9 +10,7 @@
     <Folder Include="MessageOperations\Commands\" />
     <Folder Include="MessageOperations\Cqrs\" />
     <Folder Include="MessageOperations\Queries\" />
-    <Folder Include="RetailerOperations\Commands\" />
     <Folder Include="RetailerOperations\Cqrs\" />
-    <Folder Include="RetailerOperations\Queries\" />
     <Folder Include="TokenOperations\Queries\" />
   </ItemGroup>
 
@@ -27,6 +25,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\ECommerce.Schema\ECommerce.Schema.csproj" />
+	  <ProjectReference Include="..\ECommerce.Payment\ECommerce.Payment.csproj" />
   </ItemGroup>
-
 </Project>

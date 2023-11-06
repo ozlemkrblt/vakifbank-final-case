@@ -11,9 +11,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ECommerce.Data", "..\EComme
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ECommerce.Payment", "..\ECommerce.Payment\ECommerce.Payment.csproj", "{07B6387A-8EC2-4B26-ACE6-281057708EC5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ECommerce.Schema", "..\ECommerce.Schema\ECommerce.Schema.csproj", "{A75EACCB-8A8F-456A-ACD0-20AAC6BE5444}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ECommerce.Schema", "..\ECommerce.Schema\ECommerce.Schema.csproj", "{A75EACCB-8A8F-456A-ACD0-20AAC6BE5444}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ECommerce.Operation", "..\ECommerce.Operation\ECommerce.Operation.csproj", "{80C6811E-F04C-43D7-A01C-460A063AA297}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ECommerce.Operation", "..\ECommerce.Operation\ECommerce.Operation.csproj", "{80C6811E-F04C-43D7-A01C-460A063AA297}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
