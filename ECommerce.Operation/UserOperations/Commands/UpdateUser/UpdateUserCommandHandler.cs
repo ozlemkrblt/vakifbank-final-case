@@ -32,6 +32,7 @@ public class UpdateOrderCommandHandler : IRequestHandler<UpdateUserCommand, ApiR
         entity.Name = request.Model.Name;
         entity.LastName = request.Model.LastName;
         entity.UpdateDate = DateTime.UtcNow;
+        entity.RoleId = request.Model.RoleId;
         //entity.UpdateUserId= 
 
         await dbContext.SaveChangesAsync(cancellationToken);
