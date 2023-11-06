@@ -34,6 +34,7 @@ public class UpdateRetailerCommandHandler : IRequestHandler<UpdateProductCommand
         entity.Stock= request.Model.Stock;
         entity.Description=request.Model.Description;
         entity.UpdateDate = DateTime.UtcNow;
+
         //entity.UpdateProductId= 
 
         await dbContext.SaveChangesAsync(cancellationToken);
