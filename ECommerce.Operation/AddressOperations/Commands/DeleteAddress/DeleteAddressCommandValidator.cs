@@ -7,6 +7,7 @@ public class DeleteAddressCommandValidator : AbstractValidator<DeleteAddressComm
 {
     public DeleteAddressCommandValidator()
     {
+        RuleFor(command => command.Id).NotNull().WithMessage("Product Id must be given.");
         RuleFor(command => command.Id).GreaterThan(0).WithMessage("Id must be greater than 0.");
 
     }

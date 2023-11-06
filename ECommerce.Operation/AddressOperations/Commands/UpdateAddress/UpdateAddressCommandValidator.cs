@@ -7,7 +7,7 @@ namespace ECommerce.Operation.AddressOperations.Commands.UpdateAddress
     {
         public UpdateAddressCommandValidator()
         {
-
+            RuleFor(command => command.Id).NotNull().WithMessage("Product Id must be given.");
             RuleFor(command => command.Id).GreaterThan(0).WithMessage("Id must be greater than 0.");
             RuleFor(x => x.Model.AddressLine1).MaximumLength(30).WithMessage("Address Line 1 max length is 30.").NotEmpty().WithMessage("Address Line 1 is required.");
             RuleFor(x => x.Model.AddressLine2).MaximumLength(30).WithMessage("AddresLine length max value is 30.");
