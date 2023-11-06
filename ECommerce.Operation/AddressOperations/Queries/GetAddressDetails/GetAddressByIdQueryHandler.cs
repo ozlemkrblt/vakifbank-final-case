@@ -8,11 +8,11 @@ using ECommerce.Schema;
 using Microsoft.EntityFrameworkCore;
 
 namespace ECommerce.Operation.AddressOperations.Queries.GetAddressDetails;
-public class GetAdressByIdQueryHandler : IRequestHandler<GetAddressByIdQuery, ApiResponse<AddressResponse>>
+public class GetAddressByIdQueryHandler : IRequestHandler<GetAddressByIdQuery, ApiResponse<AddressResponse>>
 {
     private readonly ECommerceDbContext dbContext;
     private readonly IMapper mapper;
-    public GetAdressByIdQueryHandler(ECommerceDbContext dbContext, IMapper mapper)
+    public GetAddressByIdQueryHandler(ECommerceDbContext dbContext, IMapper mapper)
     {
         this.dbContext = dbContext;
         this.mapper = mapper;

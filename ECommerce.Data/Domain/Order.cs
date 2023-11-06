@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations.Schema;
 using ECommerce.Base.BaseModel;
+using ECommerce.Payment.Base;
 
 namespace ECommerce.Data.Domain;
 
@@ -12,7 +13,7 @@ public class Order : BaseModel
     public int OrderNo { get; set; }
     public DateTime OrderDate { get; set; }
     public double Amount { get; set; }
-    public double PaymentStatus { get; set; }
+    public virtual PaymentStatus PaymentStatus { get; set; }
 
     public int RetailerId { get; set; }  // one order can belong to one user
     public Retailer Retailer { get; set; }
@@ -33,13 +34,12 @@ public class OrderConfiguration : IEntityTypeConfiguration<Order>
         builder.Property(x => x.IsActive).IsRequired().HasDefaultValue(true);
 
         builder.Property(x => x.Id).IsRequired(true);
-        builder.Property(x => x.OrderNo).IsRequired(true);
-        builder.Property(x => x.OrderDate).IsRequired(true);
-        //builder.HasCheckConstraint("CK_OrderDate_NotInFuture", "OrderDate <= SYSDATETIME()");
+        builder.Property(x => x.OrderNo).IsRequired(true).HasMaxLength(8).IsFixedLength(); 
+        builder.Property(x => x.OrderDate).IsRequired(true).HasDefaultValue(DateTime.UtcNow);
         builder.Property(x => x.RetailerId).IsRequired().HasMaxLength(20);
         builder.Property(x => x.ReceiptId).HasMaxLength(20);
-        builder.Property(x => x.Amount).IsRequired().HasPrecision(20,2);
-        builder.Property(x => x.PaymentStatus).IsRequired().HasMaxLength(20);
+        builder.Property(x => x.Amount).HasDefaultValue(0).HasPrecision(20,2);
+
 
         builder.HasIndex(x => x.RetailerId).IsUnique(true);
         builder.HasIndex(x => x.OrderNo).IsUnique(true);

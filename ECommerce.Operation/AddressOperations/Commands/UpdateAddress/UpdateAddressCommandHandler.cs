@@ -31,10 +31,10 @@ public class UpdateAddressCommandHandler : IRequestHandler<UpdateAddressCommand,
         }
         entity.AddressLine1 = request.Model.AddressLine1;
         entity.AddressLine2 = request.Model.AddressLine2;
-        entity.City=request.Model.City;
-        entity.District=request.Model.District;
+        entity.City = request.Model.City;
+        entity.District = request.Model.District;
         entity.District = request.Model.PostalCode;
-        entity.UserId = request.Model.UserId;   
+        entity.UserId = request.Model.UserId;
         entity.UpdateDate = DateTime.UtcNow;
         //entity.UpdateAddressId= 
 
