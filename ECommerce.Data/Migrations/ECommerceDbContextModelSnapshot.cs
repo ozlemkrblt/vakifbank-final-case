@@ -144,8 +144,10 @@ namespace ECommerce.Data.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<double>("Amount")
+                        .ValueGeneratedOnAdd()
                         .HasPrecision(20, 2)
-                        .HasColumnType("float(20)");
+                        .HasColumnType("float(20)")
+                        .HasDefaultValue(0.0);
 
                     b.Property<DateTime>("InsertDate")
                         .HasColumnType("datetime2");
@@ -159,14 +161,17 @@ namespace ECommerce.Data.Migrations
                         .HasDefaultValue(true);
 
                     b.Property<DateTime>("OrderDate")
-                        .HasColumnType("datetime2");
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetime2")
+                        .HasDefaultValue(new DateTime(2023, 11, 6, 20, 2, 29, 326, DateTimeKind.Utc).AddTicks(4578));
 
                     b.Property<int>("OrderNo")
-                        .HasColumnType("int");
+                        .HasMaxLength(8)
+                        .HasColumnType("int")
+                        .IsFixedLength();
 
-                    b.Property<double>("PaymentStatus")
-                        .HasMaxLength(20)
-                        .HasColumnType("float");
+                    b.Property<int>("PaymentStatus")
+                        .HasColumnType("int");
 
                     b.Property<int?>("ReceiptId")
                         .HasMaxLength(20)
@@ -381,6 +386,10 @@ namespace ECommerce.Data.Migrations
                     b.Property<int?>("RetailerId")
                         .IsRequired()
                         .HasMaxLength(50)
+                        .HasColumnType("int");
+
+                    b.Property<int>("RetailerTaxNumber")
+                        .HasMaxLength(20)
                         .HasColumnType("int");
 
                     b.Property<DateTime?>("UpdateDate")

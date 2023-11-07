@@ -11,7 +11,7 @@ public class MapperConfig : Profile
         CreateMap<AddressRequest, Address>();
         CreateMap<Address, AddressResponse>()
             .ForMember(dest => dest.UserName,
-                opt => opt.MapFrom(src => src.User.UserName));
+                opt => opt.MapFrom(src => src.User != null ? src.User.UserName : ""));
 
         CreateMap<AdminRequest, Admin>();
         CreateMap<Admin, AdminResponse>();
@@ -24,7 +24,9 @@ public class MapperConfig : Profile
         CreateMap<OrderRequest, Order>();
         CreateMap<Order, OrderResponse>()
             .ForMember(dest => dest.RetailerUserName,
-                opt => opt.MapFrom(src => src.Retailer.UserName));
+                opt => opt.MapFrom(src => src.Retailer.UserName))
+        .ForMember(dest => dest.PaymentStatus,
+                opt => opt.MapFrom(src => src.PaymentStatus.ToString()));
 
         CreateMap<OrderItemRequest, OrderItem>();
         CreateMap<OrderItem, OrderItemResponse>()

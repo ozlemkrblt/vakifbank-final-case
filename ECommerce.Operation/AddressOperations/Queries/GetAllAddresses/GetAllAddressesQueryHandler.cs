@@ -22,7 +22,7 @@ public class GetAllProductsQueryHandler : IRequestHandler<GetAllAddressesQuery, 
     public async Task<ApiResponse<List<AddressResponse>>> Handle(GetAllAddressesQuery request,
         CancellationToken cancellationToken)
     {
-        List<Address> list = await dbContext.Set<Address>()
+        List<Address> list = await dbContext.Set<Address>().Include(x => x.User)
             .ToListAsync(cancellationToken);
 
         List<AddressResponse> mapped = mapper.Map<List<AddressResponse>>(list);
