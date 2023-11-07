@@ -6,7 +6,7 @@ public class GetReceiptInfoByUserIdQueryValidator : AbstractValidator<GetReceipt
 {
     public GetReceiptInfoByUserIdQueryValidator()
     {
-        RuleFor(command => command.).NotNull().WithMessage("User Id must be given.");
+        RuleFor(command => command.Id).NotNull().WithMessage("User Id must be given.");
         RuleFor(command => command.Id).GreaterThan(0).WithMessage("User Id must be greater than 0.");
     }
 }

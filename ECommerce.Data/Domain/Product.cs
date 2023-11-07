@@ -12,7 +12,8 @@ public class Product : BaseModel
     public string Name { get; set; }
     public string Description { get; set; }
     public double Price { get; set; }
-    public int Stock { get; set; }
+    public int StockId { get; set; }
+    public virtual Stock Stock { get; set; }
 
 
 }
@@ -32,7 +33,7 @@ public class ProductConfiguration : IEntityTypeConfiguration<Product>
         builder.Property(x => x.Name).IsRequired();
         builder.Property(x => x.Description).HasMaxLength(100);
         builder.Property(x => x.Price).IsRequired(true).HasPrecision(10,2);
-        builder.Property(x => x.Stock).IsRequired(true).HasMaxLength(50);
+        builder.Property(x => x.StockId).IsRequired(true).HasMaxLength(10);
 
 
         builder.HasIndex(x => x.Id).IsUnique(true);
