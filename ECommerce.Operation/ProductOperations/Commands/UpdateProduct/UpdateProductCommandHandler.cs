@@ -31,7 +31,7 @@ public class UpdateRetailerCommandHandler : IRequestHandler<UpdateProductCommand
         }
         entity.Price = request.Model.Price;
         entity.Name=request.Model.Name;
-        entity.Stock= request.Model.Stock;
+        entity.StockId = request.Model.StockId;
         entity.Description=request.Model.Description;
         entity.UpdateDate = DateTime.UtcNow;
 
