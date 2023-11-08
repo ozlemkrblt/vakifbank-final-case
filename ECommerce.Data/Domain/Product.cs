@@ -37,5 +37,9 @@ public class ProductConfiguration : IEntityTypeConfiguration<Product>
 
 
         builder.HasIndex(x => x.Id).IsUnique(true);
+
+        builder.HasOne(x => x.Stock)
+    .WithOne(x => x.Product)
+    .HasForeignKey<Stock>(x => x.ProductId).IsRequired(true).OnDelete(DeleteBehavior.NoAction);
     }
 }

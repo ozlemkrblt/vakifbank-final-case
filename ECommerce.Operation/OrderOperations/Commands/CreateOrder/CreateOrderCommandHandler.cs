@@ -9,14 +9,14 @@ using MediatR;
 
 namespace ECommerce.Operation.OrderOperations.Commands.CreateOrder;
 
-public class CreateReceiptCommandHandler : IRequestHandler<CreateOrderCommand, ApiResponse<OrderResponse>>
+public class CreateOrderCommandHandler : IRequestHandler<CreateOrderCommand, ApiResponse<OrderResponse>>
 {
 
     private readonly ECommerceDbContext dbContext;
     private readonly IMapper mapper;
 
 
-    public CreateReceiptCommandHandler(ECommerceDbContext dbContext, IMapper mapper)
+    public CreateOrderCommandHandler(ECommerceDbContext dbContext, IMapper mapper)
     {
         this.dbContext = dbContext;
         this.mapper = mapper;

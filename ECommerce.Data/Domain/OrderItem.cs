@@ -13,6 +13,7 @@ public class OrderItem : BaseModel
     public int ProductId { get; set; }
     public Product Product { get; set; }
     public int ProductQuantity{ get; set; } // how many products 
+    public double TotalPrice { get; set; }
 
 }
 
@@ -28,7 +29,7 @@ public class OrderItemConfiguration : IEntityTypeConfiguration<OrderItem>
 
         builder.Property(x => x.OrderId).IsRequired(true);
         builder.Property(x => x.ProductId).IsRequired(true);
-        builder.Property(x => x.ProductQuantity).IsRequired(true).HasDefaultValue(0);
+        builder.Property(x => x.ProductQuantity).IsRequired(true).HasDefaultValue(1);
 
 
         builder.HasIndex(x => x.OrderId).IsUnique(true);

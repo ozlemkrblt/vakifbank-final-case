@@ -7,13 +7,13 @@ using ECommerce.Schema;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 
-namespace ECommerce.Operation.OrderOperations.Queries.GetOrderDetails;
-public class GetAllReceiptsQueryHandler : IRequestHandler<GetAllOrdersQuery, ApiResponse<List<OrderResponse>>>
+namespace ECommerce.Operation.OrderOperations.Queries.GetAllOrders;
+public class GetAllOrdersQueryHandler : IRequestHandler<GetAllOrdersQuery, ApiResponse<List<OrderResponse>>>
 {
 
     private readonly ECommerceDbContext dbContext;
     private readonly IMapper mapper;
-    public GetAllReceiptsQueryHandler(ECommerceDbContext dbContext, IMapper mapper)
+    public GetAllOrdersQueryHandler(ECommerceDbContext dbContext, IMapper mapper)
     {
         this.dbContext = dbContext;
         this.mapper = mapper;

@@ -6,18 +6,17 @@ using ECommerce.Data.Domain;
 using ECommerce.Operation.OrderOperations.Cqrs;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.ChangeTracking;
 
 namespace ECommerce.Operation.OrderOperations.Commands.UpdateOrder;
 
-public class UpdateRoleCommandHandler : IRequestHandler<UpdateOrderCommand, ApiResponse>
+public class UpdateOrderCommandHandler : IRequestHandler<UpdateOrderCommand, ApiResponse>
 {
 
     private readonly ECommerceDbContext dbContext;
     private readonly IMapper mapper;
 
 
-    public UpdateRoleCommandHandler(ECommerceDbContext dbContext, IMapper mapper)
+    public UpdateOrderCommandHandler(ECommerceDbContext dbContext, IMapper mapper)
     {
         this.dbContext = dbContext;
         this.mapper = mapper;
