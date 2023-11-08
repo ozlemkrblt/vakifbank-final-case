@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using ECommerce.Base.Stock;
 using ECommerce.Data.Domain;
 using ECommerce.Schema;
 
@@ -52,6 +53,12 @@ public class MapperConfig : Profile
 
         CreateMap<RoleRequest, Role>();
         CreateMap<Role, RoleResponse>();
+
+        CreateMap<StockRequest,Stock>();
+        CreateMap<Stock, StockResponse>()
+            .ForMember(dest => dest.ProductName, opt => opt.MapFrom(src => src.Product.Name))
+            .ForMember(dest => dest.StockStatus, opt=> opt.MapFrom(src => (StockStatus)src.StockStatus));
+
 
         CreateMap<UserRequest, User>();
         CreateMap<User, UserResponse>()

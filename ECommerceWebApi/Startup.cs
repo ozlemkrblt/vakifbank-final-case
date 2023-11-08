@@ -20,6 +20,7 @@ using ECommerce.Base.Validator;
 using Microsoft.OpenApi.Models;
 using Microsoft.IdentityModel.Tokens;
 using ECommerce.Base.JwtToken;
+using Microsoft.AspNetCore.Cors;
 //using Microsoft.OpenApi.Models;
 //using StackExchange.Redis;
 
@@ -37,6 +38,13 @@ public class Startup
 
     public void ConfigureServices(IServiceCollection services)
     {
+
+        services.AddCors(o => o.AddDefaultPolicy(policy =>
+        {
+            policy.WithOrigins("http://localhost:4200", "https://localhost:4200")
+                   .AllowAnyMethod()
+                   .AllowAnyHeader();
+        }));
         string connection = Configuration.GetConnectionString("MsSqlConnection");
         services.AddDbContext<ECommerceDbContext>(opts => opts.UseSqlServer(connection));
 
@@ -73,6 +81,8 @@ public class Startup
         //        Location = ResponseCacheLocation.Any,
         //    }));
         //
+
+
         services.AddSwaggerGen(c =>
        {
            c.SwaggerDoc("v1", new OpenApiInfo { Title = "ECommerce Api Management", Version = "v1.0" });
@@ -119,6 +129,8 @@ public class Startup
                 ClockSkew = TimeSpan.FromMinutes(2)
             };
         });
+
+
     }
 
     // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -131,7 +143,7 @@ public class Startup
             app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "ECommerce WebApi v1"));
         }
 
-
+        app.UseCors();
         app.UseMiddleware<ErrorHandlerMiddleware>();
         app.UseMiddleware<HeartBeatMiddleware>();
         Action<RequestProfilerModel> requestResponseHandler = requestProfilerModel =>

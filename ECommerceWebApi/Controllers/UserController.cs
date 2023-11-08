@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace ECommerceWebApi.Controllers;
 
 
-[Route("vk/api/v1/[controller]")]
+[Route("os/api/v1/[controller]")]
 [ApiController]
 [Authorize]
 public class UserController : ControllerBase
