@@ -10,7 +10,6 @@ namespace ECommerceWebApi.Controllers;
 
 [Route("os/api/v1/[controller]")]
 [ApiController]
-[Authorize]
 public class UserController : ControllerBase
 {
     private IMediator mediator;
@@ -40,7 +39,6 @@ public class UserController : ControllerBase
     }
 
     [HttpPost]
-    [Authorize(Roles = "admin")]
     public async Task<ApiResponse<UserResponse>> Post([FromBody] UserRequest request)
     {
         var operation = new CreateUserCommand(request);

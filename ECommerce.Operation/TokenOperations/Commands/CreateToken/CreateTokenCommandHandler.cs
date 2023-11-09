@@ -1,7 +1,7 @@
 ﻿using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
-using System.Security.Cryptography;
 using System.Text;
+using ECommerce.Base;
 using ECommerce.Base.JwtToken;
 using ECommerce.Base.Response;
 using ECommerce.Data.Context;
@@ -38,17 +38,7 @@ public class TokenCommandHandler :
         {
             return new ApiResponse<TokenResponse>("Invalid user informations");
         }
-
-            var md5 = MD5.Create();
-            byte[] inputBytes = Encoding.ASCII.GetBytes(request.Model.Password.ToUpper());
-            byte[] hashBytes = md5.ComputeHash(inputBytes);
-            StringBuilder sb = new StringBuilder();
-            for (int i = 0; i < hashBytes.Length; i++)
-            {
-                sb.Append(hashBytes[i].ToString("X2"));
-            }
-            string hashedPassword = sb.ToString().ToLower();
-            // Now, hashedPassword contains the MD5 hash of the input password
+            string hashedPassword = Md5.Create(request.Model.Password);
 
             if (entity.Password != hashedPassword)
             {

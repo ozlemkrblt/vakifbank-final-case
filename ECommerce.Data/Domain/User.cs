@@ -43,7 +43,7 @@ public class UserConfiguration : IEntityTypeConfiguration<User>
         builder.Property(x => x.Name).IsRequired().HasMaxLength(50);
         builder.Property(x => x.LastName).IsRequired().HasMaxLength(50);
         builder.Property(x => x.UserName).IsRequired(true).HasMaxLength(10);
-        builder.Property(x => x.RoleId).IsRequired(true);
+        builder.Property(x => x.RoleId).IsRequired();
         builder.Property(x => x.LastActivityDate).IsRequired();
         builder.Property(x => x.PasswordRetryCount).IsRequired().HasDefaultValue(0);
 

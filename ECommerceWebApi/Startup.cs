@@ -62,6 +62,11 @@ public class Startup
             x.RegisterValidatorsFromAssemblyContaining<BaseValidator>();
         });
 
+        services.AddControllersWithViews()
+        .AddNewtonsoftJson(options =>
+     options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore
+        );
+
         //services.AddMemoryCache();
         //
         //// redis
