@@ -1,5 +1,5 @@
 ﻿using ECommerce.Base.BaseModel;
-using ECommerce.Base.Stock;
+using ECommerce.Base.Enums;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using Microsoft.EntityFrameworkCore;
 

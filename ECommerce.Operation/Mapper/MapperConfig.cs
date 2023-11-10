@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using ECommerce.Base.Enums;
 using ECommerce.Base.Stock;
 using ECommerce.Data.Domain;
 using ECommerce.Schema;
@@ -27,7 +28,8 @@ public class MapperConfig : Profile
             .ForMember(dest => dest.RetailerUserName,
                 opt => opt.MapFrom(src => src.Retailer.UserName))
         .ForMember(dest => dest.PaymentStatus,
-                opt => opt.MapFrom(src => src.PaymentStatus.ToString()));
+                opt => opt.MapFrom(src => src.PaymentStatus.ToString()))
+        .ForMember(dest => dest.OrderStatus, opt => opt.MapFrom(src => (OrderStatus)src.OrderStatus));
 
         CreateMap<OrderItemRequest, OrderItem>();
         CreateMap<OrderItem, OrderItemResponse>()

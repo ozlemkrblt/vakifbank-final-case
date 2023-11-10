@@ -8,6 +8,7 @@ namespace ECommerce.Data.Domain;
 [Table("Receipt", Schema = "dbo")]
 public class Receipt : BaseModel
 {
+    public int ReceiptNo { get; set; }
     public int ReceiptInfoId { get; set; }
     public ReceiptInfo ReceiptInfo { get; set; }
 

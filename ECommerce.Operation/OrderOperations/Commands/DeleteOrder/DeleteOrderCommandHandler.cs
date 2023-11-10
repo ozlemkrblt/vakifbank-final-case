@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using ECommerce.Base.Enums;
 using ECommerce.Base.Response;
 using ECommerce.Data.Context;
 using ECommerce.Data.Domain;
@@ -24,15 +25,29 @@ public class DeleteOrderCommandHandler : IRequestHandler<DeleteOrderCommand, Api
 
     public async Task<ApiResponse> Handle(DeleteOrderCommand request, CancellationToken cancellationToken)
     {
+
         var entity = await dbContext.Set<Order>().FirstOrDefaultAsync(x => x.Id == request.Id, cancellationToken);
         if (entity == null)
         {
             return new ApiResponse("Record not found!");
         }
 
-        entity.IsActive = false;
-        await dbContext.SaveChangesAsync(cancellationToken);
-        return new ApiResponse();
+
+        if (entity.OrderStatus != OrderStatus.Approved)
+        {
+            if (entity.OrderStatus == OrderStatus.Cancelled)
+            {
+                return new ApiResponse("Order is already cancelled. You cannot cancel it. ");
+            }
+            entity.IsActive = false;
+            await dbContext.SaveChangesAsync(cancellationToken);
+            return new ApiResponse();
+        }
+        else
+        {
+            return new ApiResponse("Order is already approved. You cannot cancel it. ");
+        }
+
     }
 
 }

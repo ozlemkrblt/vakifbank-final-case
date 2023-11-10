@@ -25,12 +25,10 @@ public class GetAllOrderItemsByOrderQueryHandler : IRequestHandler<GetAllOrderIt
     {
         var result = new List<OrderItemResponse>();
 
-
         var orderItems = await dbContext.Set<OrderItem>()
             .Where(item => item.OrderId == request.Id)
             .ToListAsync(cancellationToken);
 
-        // Map the order items to the response DTO
         result = mapper.Map<List<OrderItemResponse>>(orderItems);
 
         if (!result.Any())

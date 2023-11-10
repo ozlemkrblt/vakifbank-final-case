@@ -7,6 +7,7 @@ using ECommerce.Schema;
 using ECommerce.Payment.Base;
 using MediatR;
 using ECommerce.Base.Stock;
+using ECommerce.Base.Enums;
 
 namespace ECommerce.Operation.OrderItemOperations.Commands.CreateOrderItem;
 

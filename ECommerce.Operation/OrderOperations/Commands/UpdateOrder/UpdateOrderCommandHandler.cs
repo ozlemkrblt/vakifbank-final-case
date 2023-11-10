@@ -1,5 +1,5 @@
 ﻿using AutoMapper;
-using Azure;
+using ECommerce.Base.Enums;
 using ECommerce.Base.Response;
 using ECommerce.Data.Context;
 using ECommerce.Data.Domain;
@@ -34,7 +34,7 @@ public class UpdateOrderCommandHandler : IRequestHandler<UpdateOrderCommand, Api
         entity.PaymentStatus = request.Model.PaymentStatus;
         entity.Amount = request.Model.Amount;
         entity.UpdateDate = DateTime.UtcNow;
-        //entity.UpdateOrderId= 
+        entity.OrderStatus = (OrderStatus)request.Model.OrderStatus; 
 
         dbContext.Entry(entity).Property(x => x.OrderNo).IsModified = false;
         dbContext.Entry(entity).Property(x => x.OrderDate).IsModified = false;
