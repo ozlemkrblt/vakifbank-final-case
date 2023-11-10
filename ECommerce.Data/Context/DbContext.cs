@@ -10,6 +10,14 @@ public class ECommerceDbContext : DbContext
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
+        modelBuilder.HasSequence<int>("AdminIdSequence", schema: "dbo")
+        .StartsAt(10000000) 
+        .IncrementsBy(1);
+
+        modelBuilder.HasSequence<int>("UserIdSequence", schema: "dbo")
+    .StartsAt(20000000)
+    .IncrementsBy(1);
+
         modelBuilder.Entity<User>().UseTptMappingStrategy();
         modelBuilder.ApplyConfiguration(new AddressConfiguration ());
         modelBuilder.ApplyConfiguration(new AdminConfiguration());

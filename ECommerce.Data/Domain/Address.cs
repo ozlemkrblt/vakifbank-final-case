@@ -28,6 +28,7 @@ public class AddressConfiguration : IEntityTypeConfiguration<Address>
         builder.Property(x => x.UpdateDate).IsRequired(false);
         builder.Property(x => x.IsActive).IsRequired().HasDefaultValue(true);
 
+        builder.Property(x => x.Id).ValueGeneratedOnAdd().IsRequired();
         builder.Property(x => x.UserId).IsRequired(true);
         builder.Property(x => x.AddressLine1).IsRequired(true).HasMaxLength(50);
         builder.Property(x => x.AddressLine2).IsRequired(true).HasMaxLength(50);

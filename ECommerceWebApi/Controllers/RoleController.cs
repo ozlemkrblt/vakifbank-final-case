@@ -39,7 +39,6 @@ public class RoleController : ControllerBase
     }
 
     [HttpPost]
-    [Authorize(Roles = "admin")]
     public async Task<ApiResponse<RoleResponse>> Post([FromBody] RoleRequest request)
     {
         var operation = new CreateRoleCommand(request);

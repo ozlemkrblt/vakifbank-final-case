@@ -25,7 +25,7 @@ public class StockConfiguration : IEntityTypeConfiguration<Stock>
         builder.Property(x => x.UpdateDate).IsRequired(false);
         builder.Property(x => x.IsActive).IsRequired().HasDefaultValue(true);
 
-        builder.Property(x => x.Id).IsRequired(true);
+        builder.Property(x => x.Id).ValueGeneratedOnAdd().IsRequired();
         builder.Property(x => x.ProductId).IsRequired(true);
         builder.Property(x => x.MaxStock).HasDefaultValue(1000);
         builder.Property(x => x.StockValue).IsRequired(true);

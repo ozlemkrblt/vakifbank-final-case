@@ -22,6 +22,12 @@ namespace ECommerce.Data.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
+            modelBuilder.HasSequence<int>("AdminIdSequence", "dbo")
+                .StartsAt(10000000L);
+
+            modelBuilder.HasSequence<int>("UserIdSequence", "dbo")
+                .StartsAt(20000000L);
+
             modelBuilder.Entity("ECommerce.Data.Domain.Address", b =>
                 {
                     b.Property<int>("Id")
@@ -163,7 +169,7 @@ namespace ECommerce.Data.Migrations
                     b.Property<DateTime>("OrderDate")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2023, 11, 6, 20, 2, 29, 326, DateTimeKind.Utc).AddTicks(4578));
+                        .HasDefaultValue(new DateTime(2023, 11, 10, 16, 22, 32, 314, DateTimeKind.Utc).AddTicks(3352));
 
                     b.Property<int>("OrderNo")
                         .HasMaxLength(8)
@@ -231,7 +237,10 @@ namespace ECommerce.Data.Migrations
                     b.Property<int>("ProductQuantity")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
-                        .HasDefaultValue(0);
+                        .HasDefaultValue(1);
+
+                    b.Property<double>("TotalPrice")
+                        .HasColumnType("float");
 
                     b.Property<DateTime?>("UpdateDate")
                         .HasColumnType("datetime2");
@@ -284,8 +293,8 @@ namespace ECommerce.Data.Migrations
                         .HasPrecision(10, 2)
                         .HasColumnType("float(10)");
 
-                    b.Property<int>("Stock")
-                        .HasMaxLength(50)
+                    b.Property<int>("StockId")
+                        .HasMaxLength(10)
                         .HasColumnType("int");
 
                     b.Property<DateTime?>("UpdateDate")
@@ -448,6 +457,49 @@ namespace ECommerce.Data.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Role", "dbo");
+                });
+
+            modelBuilder.Entity("ECommerce.Data.Domain.Stock", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<DateTime>("InsertDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("InsertUserId")
+                        .HasColumnType("int");
+
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("bit");
+
+                    b.Property<int>("MaxStock")
+                        .HasColumnType("int");
+
+                    b.Property<int>("ProductId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("StockStatus")
+                        .HasColumnType("int");
+
+                    b.Property<int>("StockValue")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime?>("UpdateDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("UpdateUserId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ProductId")
+                        .IsUnique();
+
+                    b.ToTable("Stock");
                 });
 
             modelBuilder.Entity("ECommerce.Data.Domain.User", b =>
@@ -642,6 +694,17 @@ namespace ECommerce.Data.Migrations
                     b.Navigation("Retailer");
                 });
 
+            modelBuilder.Entity("ECommerce.Data.Domain.Stock", b =>
+                {
+                    b.HasOne("ECommerce.Data.Domain.Product", "Product")
+                        .WithOne("Stock")
+                        .HasForeignKey("ECommerce.Data.Domain.Stock", "ProductId")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
+
+                    b.Navigation("Product");
+                });
+
             modelBuilder.Entity("ECommerce.Data.Domain.User", b =>
                 {
                     b.HasOne("ECommerce.Data.Domain.Role", "Role")
@@ -676,6 +739,12 @@ namespace ECommerce.Data.Migrations
                     b.Navigation("Items");
 
                     b.Navigation("Receipt")
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("ECommerce.Data.Domain.Product", b =>
+                {
+                    b.Navigation("Stock")
                         .IsRequired();
                 });
 

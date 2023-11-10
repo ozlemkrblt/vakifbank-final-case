@@ -29,6 +29,7 @@ public class ProductConfiguration : IEntityTypeConfiguration<Product>
         builder.Property(x => x.UpdateDate).IsRequired(false);
         builder.Property(x => x.IsActive).IsRequired().HasDefaultValue(true);
 
+        builder.Property(x => x.Id).ValueGeneratedOnAdd().IsRequired();
         builder.Property(x => x.Id).IsRequired(true);
         builder.Property(x => x.Name).IsRequired();
         builder.Property(x => x.Description).HasMaxLength(100);

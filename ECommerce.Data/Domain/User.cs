@@ -37,7 +37,8 @@ public class UserConfiguration : IEntityTypeConfiguration<User>
         builder.Property(x => x.UpdateDate).IsRequired(false);
         builder.Property(x => x.IsActive).IsRequired().HasDefaultValue(true);
 
-        builder.Property(x => x.Id).IsRequired(true);
+        //builder.Property(x => x.Id).HasComputedColumnSql("CASE WHEN [RoleId] = 1 THEN NEXT VALUE FOR dbo.AdminIdSequence ELSE NEXT VALUE FOR dbo.UserIdSequence END");
+        builder.Property(x => x.Id).ValueGeneratedOnAdd().IsRequired();
         builder.Property(x => x.Email).IsRequired(true).HasMaxLength(50);
         builder.Property(x => x.Password).IsRequired(true).HasMaxLength(50);
         builder.Property(x => x.Name).IsRequired().HasMaxLength(50);
