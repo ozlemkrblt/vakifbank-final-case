@@ -93,7 +93,7 @@ public class TokenCommandHandler :
             new Claim("UserName", user.UserName.ToString()),
             new Claim("Role", user.Role.Name),
             new Claim("Email", user.Email),
-            new Claim(ClaimTypes.Role, user.Role.Name),
+            //new Claim(ClaimTypes.Role, user.Role.Name),
             new Claim("FullName", $"{user.Name} {user.LastName}")
         };
 

@@ -8,11 +8,11 @@ using ECommerce.Schema;
 using Microsoft.EntityFrameworkCore;
 
 namespace ECommerce.Operation.UserOperations.Queries.GetUserDetails;
-public class GetProductByIdQueryHandler : IRequestHandler<GetUserByIdQuery, ApiResponse<UserResponse>>
+public class GetUserByIdQueryHandler : IRequestHandler<GetUserByIdQuery, ApiResponse<UserResponse>>
 {
     private readonly ECommerceDbContext dbContext;
     private readonly IMapper mapper;
-    public GetProductByIdQueryHandler(ECommerceDbContext dbContext, IMapper mapper)
+    public GetUserByIdQueryHandler(ECommerceDbContext dbContext, IMapper mapper)
     {
         this.dbContext = dbContext;
         this.mapper = mapper;

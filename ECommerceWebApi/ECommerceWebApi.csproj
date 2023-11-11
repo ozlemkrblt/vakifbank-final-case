@@ -42,6 +42,7 @@
 	  <ProjectReference Include="..\ECommerce.Base\ECommerce.Base.csproj" />
 	  <ProjectReference Include="..\ECommerce.Data\ECommerce.Data.csproj" />
 	  <ProjectReference Include="..\ECommerce.Operation\ECommerce.Operation.csproj" />
+	  <ProjectReference Include="..\ECommerce.Payment\ECommerce.Payment.csproj" />
   </ItemGroup>
 
 </Project>

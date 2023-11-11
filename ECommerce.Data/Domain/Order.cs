@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations.Schema;
 using ECommerce.Base.BaseModel;
-using ECommerce.Payment.Base;
+using ECommerce.Payment.Domain;
 using ECommerce.Base.Enums;
 
 namespace ECommerce.Data.Domain;
@@ -14,8 +14,9 @@ public class Order : BaseModel
     public int OrderNo { get; set; }
     public DateTime OrderDate { get; set; }
     public double Amount { get; set; }
-    public virtual PaymentStatus PaymentStatus { get; set; }
 
+    public int PaymentId { get; set; }
+    public virtual OrderPayment Payment { get; set; }
     public int RetailerId { get; set; }  // one order can belong to one user
     public Retailer Retailer { get; set; }
 

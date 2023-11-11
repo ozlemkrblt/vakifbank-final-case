@@ -8,14 +8,14 @@ using Microsoft.EntityFrameworkCore;
 
 namespace ECommerce.Operation.UserOperations.Commands.DeleteUser;
 
-public class DeleteOrderCommandHandler : IRequestHandler<DeleteUserCommand, ApiResponse>
+public class DeleteeUserCommandHandler : IRequestHandler<DeleteUserCommand, ApiResponse>
 {
 
     private readonly ECommerceDbContext dbContext;
     private readonly IMapper mapper;
 
 
-    public DeleteOrderCommandHandler(ECommerceDbContext dbContext, IMapper mapper)
+    public DeleteUserCommandHandler(ECommerceDbContext dbContext, IMapper mapper)
     {
         this.dbContext = dbContext;
         this.mapper = mapper;

@@ -8,14 +8,14 @@ using Microsoft.EntityFrameworkCore;
 
 namespace ECommerce.Operation.UserOperations.Commands.UpdateUser;
 
-public class UpdateOrderCommandHandler : IRequestHandler<UpdateUserCommand, ApiResponse>
+public class UpdateUserCommandHandler : IRequestHandler<UpdateUserCommand, ApiResponse>
 {
 
     private readonly ECommerceDbContext dbContext;
     private readonly IMapper mapper;
 
 
-    public UpdateOrderCommandHandler(ECommerceDbContext dbContext, IMapper mapper)
+    public UpdateUserCommandHandler(ECommerceDbContext dbContext, IMapper mapper)
     {
         this.dbContext = dbContext;
         this.mapper = mapper;

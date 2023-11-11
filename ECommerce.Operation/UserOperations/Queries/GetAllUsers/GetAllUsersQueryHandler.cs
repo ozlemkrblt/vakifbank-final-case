@@ -6,15 +6,14 @@ using ECommerce.Operation.UserOperations.Cqrs;
 using ECommerce.Schema;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
-using System.Security.Cryptography.X509Certificates;
 
 namespace ECommerce.Operation.UserOperations.Queries.GetUserDetails;
-public class GetAllProductsQueryHandler : IRequestHandler<GetAllUsersQuery, ApiResponse<List<UserResponse>>>
+public class GetAllUsersQueryHandler : IRequestHandler<GetAllUsersQuery, ApiResponse<List<UserResponse>>>
 {
 
     private readonly ECommerceDbContext dbContext;
     private readonly IMapper mapper;
-    public GetAllProductsQueryHandler(ECommerceDbContext dbContext, IMapper mapper)
+    public GetAllUsersQueryHandler(ECommerceDbContext dbContext, IMapper mapper)
     {
         this.dbContext = dbContext;
         this.mapper = mapper;

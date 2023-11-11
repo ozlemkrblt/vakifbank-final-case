@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net7.0</TargetFramework>
@@ -6,8 +6,19 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+	<ItemGroup>
+		<PackageReference Include="AutoMapper" Version="12.0.1" />
+		<PackageReference Include="MediatR" Version="9.0.0" />
+		<PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="9.0.0" />
+		<PackageReference Include="FluentValidation.AspNetCore" Version="9.5.2" />
+		<PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="9.5.2" />
+		<PackageReference Include="Portable.BouncyCastle" Version="1.9.0" />
+		<PackageReference Include="System.Security.Cryptography.Algorithms" Version="4.3.1" />
+	</ItemGroup>
+	
   <ItemGroup>
     <ProjectReference Include="..\ECommerce.Base\ECommerce.Base.csproj" />
+	  <ProjectReference Include="..\ECommerce.Data\ECommerce.Data.csproj" />
   </ItemGroup>
 
 </Project>

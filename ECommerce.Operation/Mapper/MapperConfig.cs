@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
 using ECommerce.Base.Enums;
-using ECommerce.Base.Stock;
+using ECommerce.Base.Enums;
 using ECommerce.Data.Domain;
 using ECommerce.Schema;
 
