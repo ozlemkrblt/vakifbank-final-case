@@ -10,6 +10,26 @@ export const navItems: INavData[] = [
       text: 'NEW'
     }
   },
+  
+  {
+    title: true,
+    name: 'Adresses'
+  },
+  {
+    name: 'Adresses',
+    url: '/address',
+    iconComponent: { name: 'cil-location-pin' },
+    children: [
+      {
+        name: 'Add',
+        url: '/address/add'
+      },
+      {
+        name: 'List',
+        url: '/address/list'
+      }
+    ]
+  },
   {
     title: true,
     name: 'Cards'
@@ -17,7 +37,7 @@ export const navItems: INavData[] = [
   {
     name: 'Cards',
     url: '/card',
-    iconComponent: { name: 'cil-puzzle' },
+    iconComponent: { name: 'cil-credit-card' },
     children: [
       {
         name: 'Add',
@@ -29,6 +49,41 @@ export const navItems: INavData[] = [
       }
     ]
   },
+  {
+    name: 'Roles',
+    url: '/role',
+    iconComponent: { name: 'cil-location-pin' },
+    children: [
+      {
+        name: 'Add',
+        url: '/role/add'
+      },
+      {
+        name: 'List',
+        url: '/role/list'
+      },
+      {
+        name: 'Detail',
+        url: '/role/detail'
+      }
+    ]
+  },
+  {
+    name: 'Products',
+    url: '/product',
+    iconComponent: { name: 'cil-location-pin' },
+    children: [
+      {
+        name: 'Add',
+        url: '/product/add'
+      },
+      {
+        name: 'List',
+        url: '/product/list'
+      }
+    ]
+  },
+  
   {
     title: true,
     name: 'Theme'

@@ -27,7 +27,6 @@ export class DefaultHeaderComponent extends HeaderComponent implements OnInit {
   }
   ngOnInit(): void {
     this.user = this.storage.getUser();
-    //console.log(this.user.);
   }
   signOut(){
     this.auth.logOut();

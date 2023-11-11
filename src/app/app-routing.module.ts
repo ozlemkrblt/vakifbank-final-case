@@ -28,10 +28,28 @@ const routes: Routes = [
           import('./views/dashboard/dashboard.module').then((m) => m.DashboardModule)
       },
       {
+        path: 'address',
+        canActivate: [AuthGuardService],
+        loadChildren: () =>
+          import('./views/address/address.module').then((m) => m.AddressModule)
+      },
+      {
+        path: 'role',
+        canActivate: [AuthGuardService],
+        loadChildren: () =>
+          import('./views/role/role.module').then((m) => m.RoleModule)
+      },
+      {
         path: 'card',
         canActivate: [AuthGuardService],
         loadChildren: () =>
           import('./views/cards/cards.module').then((m) => m.CardsModule)
+      },
+      {
+        path: 'product',
+        canActivate: [AuthGuardService],
+        loadChildren: () =>
+          import('./views/products/products.module').then((m) => m.ProductsModule)
       },
       {
         path: 'theme',

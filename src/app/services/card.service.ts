@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Observable } from 'rxjs';
-const AUTH_API = 'http://localhost:5000/api/';
+import { environment } from '../../environments/environment';
+
 interface Icard  {
   cardHolder: string;
   cardNumber: number;
@@ -9,28 +9,26 @@ interface Icard  {
   expenseLimit: number;
 }
 
-const httpOptions = {
-  headers : new HttpHeaders({'Content-Type':'application/json'})
-}
 @Injectable({
   providedIn: 'root'
 })
 export class CardService {
-
+  private AUTH_API = environment.AUTH_API;
+  private httpOptions = environment.httpOptions;
   constructor(private http:HttpClient) { 
 
   }
   add(params:any){
-    return this.http.post(AUTH_API + 'ads',params,httpOptions)
+    return this.http.post(this.AUTH_API + 'ads',params,this.httpOptions)
   }
   get(){
-    return this.http.get(AUTH_API + 'ads',httpOptions)
+    return this.http.get(this.AUTH_API + 'ads',this.httpOptions)
   }
   getById(id:number){
-    return this.http.get(`${AUTH_API}ads/detail/${id}`,httpOptions)
+    return this.http.get(`${this.AUTH_API}ads/detail/${id}`,this.httpOptions)
   }
   update(id:number,params:any){
-    return this.http.put(`${AUTH_API}ads/${id}`,params,httpOptions)
+    return this.http.put(`${this.AUTH_API}ads/${id}`,params,this.httpOptions)
   }
 }
 

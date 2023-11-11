@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormGroup, FormControl } from '@angular/forms';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { AuthService } from '../../../services/auth.service'
 import { Router } from '@angular/router'
 import { StorageService } from 'src/app/services/storage.service';
@@ -13,8 +13,8 @@ import { ToastrService } from 'ngx-toastr';
 })
 export class LoginComponent {
   loginForm = new FormGroup({
-    telephone: new FormControl(''),
-    pin: new FormControl('')
+    userName: new FormControl(''),
+    password: new FormControl('', Validators.required),
   })
   constructor(
     private authService:AuthService,
@@ -25,18 +25,22 @@ export class LoginComponent {
     
   }
   onSubmit(){
-    const { telephone,pin } = this.loginForm.value
-    this.authService.login(telephone,pin).subscribe({
+    const { userName,password } = this.loginForm.value
+    this.authService.login(userName,password).subscribe({
       next: data =>{
         this.storage.saveUser(data)
         this.router.navigate(['/dashboard'])
       },
       error: err => {
-        console.log('berkay',err.error.message)
-        this.toastr.error (err.error.message, 'Error');
+        console.log('Error object:', err); // Log the entire error object to inspect its structure
+        if (err && err.error && err.error.message) {
+          this.toastr.error(err.error.message, 'Error');
+        } else {
+          this.toastr.error('An error occurred. Please try again later.', 'Error');
+        }
       }
-    })
-    //this.authService.login();
+    });
+    
   }
 
 }

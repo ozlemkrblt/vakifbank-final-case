@@ -42,6 +42,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { httpInterceptorProviders } from '../app/helpers/token.interceptor'
 import { ToastrModule } from 'ngx-toastr';
 import { SpinnerComponent } from './views/spinner/spinner.component';
+import { EditComponent } from './views/edit/edit.component';
+import { ListComponent } from './list/list.component';
 const APP_CONTAINERS = [
   DefaultFooterComponent,
   DefaultHeaderComponent,
@@ -49,7 +51,7 @@ const APP_CONTAINERS = [
 ];
 
 @NgModule({
-  declarations: [AppComponent, ...APP_CONTAINERS, SpinnerComponent],
+  declarations: [AppComponent, ...APP_CONTAINERS, SpinnerComponent, EditComponent, ListComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
