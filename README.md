@@ -51,7 +51,7 @@ Proje gereksinimleri ve kurulum aşamaları aşağıda bahsedilmiştir:
 
 ## Kullanım
 
-- API Dökümantasyonu
+- [API Dökümantasyonu](https://web.postman.co/documentation/29739948-a46506af-2603-43e3-8f03-ceb975a85f80/publish?workspaceId=bd44762a-e772-4de8-8b1b-0cfa41054426#url)
 - Front-end kısmını henüz bitirmediğimden dolayı , Angular'ın default portu https://localhost:4200 'den erişebilirsiniz. CORS Konfigürasyonu yapılmıştır.
 Login ve Register sayfaları çalışmaktadır. 
 
