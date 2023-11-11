@@ -1,9 +1,7 @@
-﻿
-
-using ECommerce.Operation.ProductOperations.Cqrs;
+﻿using ECommerce.Operation.ProductOperations.Cqrs;
 using FluentValidation;
 
-namespace ECommerce.Operation.ProductOperations.Commands.CreateProduct;
+namespace ECommerce.Operation.ProductOperations.Commands.UpdateProduct;
 
 public class UpdateProductCommandValidator : AbstractValidator<UpdateProductCommand>
 {

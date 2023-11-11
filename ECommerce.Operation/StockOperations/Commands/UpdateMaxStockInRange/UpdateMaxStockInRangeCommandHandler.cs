@@ -6,7 +6,7 @@ using ECommerce.Operation.StockOperations.Cqrs;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 
-namespace ECommerce.Operation.StockOperations.Commands.UpdateStockValueInRange;
+namespace ECommerce.Operation.StockOperations.Commands.UpdateMaxStockInRange;
 
 public class UpdateMaxStockInRangeCommandHandler : IRequestHandler<UpdateMaxStockInRangeCommand, ApiResponse>
 {
@@ -26,7 +26,8 @@ public class UpdateMaxStockInRangeCommandHandler : IRequestHandler<UpdateMaxStoc
     {
 
 
-        foreach (var i in request.Model.ProductsToUpdateStock) {
+        foreach (var i in request.Model.ProductsToUpdateStock)
+        {
 
 
             var entity = await dbContext.Set<Stock>().FirstOrDefaultAsync(x => x.ProductId == i.Key, cancellationToken);
@@ -36,12 +37,12 @@ public class UpdateMaxStockInRangeCommandHandler : IRequestHandler<UpdateMaxStoc
             }
 
 
-            entity.MaxStock =  i.Value;
+            entity.MaxStock = i.Value;
             entity.UpdateDate = DateTime.UtcNow;
 
         }
 
-      
+
 
         await dbContext.SaveChangesAsync(cancellationToken);
         return new ApiResponse();

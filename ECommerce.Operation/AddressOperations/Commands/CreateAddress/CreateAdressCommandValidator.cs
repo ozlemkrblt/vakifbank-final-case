@@ -2,7 +2,7 @@
 using ECommerce.Schema;
 using FluentValidation;
 
-namespace Vk.Operation.Validation;
+namespace ECommerce.Operation.AddressOperations.Commands.CreateAddress;
 
 public class CreateAddressCommandValidator : AbstractValidator<CreateAddressCommand>
 {

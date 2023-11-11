@@ -7,7 +7,7 @@ using ECommerce.Schema;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 
-namespace ECommerce.Operation.UserOperations.Queries.GetUserDetails;
+namespace ECommerce.Operation.UserOperations.Queries.GetAllUsers;
 public class GetAllUsersQueryHandler : IRequestHandler<GetAllUsersQuery, ApiResponse<List<UserResponse>>>
 {
 
@@ -23,7 +23,7 @@ public class GetAllUsersQueryHandler : IRequestHandler<GetAllUsersQuery, ApiResp
     public async Task<ApiResponse<List<UserResponse>>> Handle(GetAllUsersQuery request,
         CancellationToken cancellationToken)
     {
-       List<User> list = await dbContext.Set<User>().Include(x => x.Addresses).ToListAsync(cancellationToken);
+        List<User> list = await dbContext.Set<User>().Include(x => x.Addresses).ToListAsync(cancellationToken);
 
         List<UserResponse> mapped = mapper.Map<List<UserResponse>>(list);
         return new ApiResponse<List<UserResponse>>(mapped);

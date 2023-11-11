@@ -6,7 +6,7 @@ using ECommerce.Operation.ReceiptOperations.Cqrs;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 
-namespace ECommerce.Operation.ReceiptOperations.Commands.DeleteReceiptInfo;
+namespace ECommerce.Operation.ReceiptOperations.Commands.DeleteReceipt;
 
 public class DeleteReceiptCommandHandler : IRequestHandler<DeleteReceiptCommand, ApiResponse>
 {

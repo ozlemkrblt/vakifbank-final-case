@@ -14,7 +14,7 @@ using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 
 
-namespace ECommerce.Operation.TokenOperations.Command;
+namespace ECommerce.Operation.TokenOperations.Commands.CreateToken;
 
 public class TokenCommandHandler :
     IRequestHandler<CreateTokenCommand, ApiResponse<TokenResponse>>
@@ -38,33 +38,33 @@ public class TokenCommandHandler :
         {
             return new ApiResponse<TokenResponse>("Invalid user informations");
         }
-            string hashedPassword = Md5.Create(request.Model.Password);
+        string hashedPassword = Md5.Create(request.Model.Password);
 
-            if (entity.Password != hashedPassword)
-            {
-                entity.LastActivityDate = DateTime.UtcNow;
-                entity.PasswordRetryCount++;
-                await dbContext.SaveChangesAsync(cancellationToken);
+        if (entity.Password != hashedPassword)
+        {
+            entity.LastActivityDate = DateTime.UtcNow;
+            entity.PasswordRetryCount++;
+            await dbContext.SaveChangesAsync(cancellationToken);
 
-                return new ApiResponse<TokenResponse>("Invalid user informations!");
-            }
+            return new ApiResponse<TokenResponse>("Invalid user informations!");
+        }
 
-            if (!entity.IsActive)
-            {
-                return new ApiResponse<TokenResponse>("Invalid user!");
-            }
+        if (!entity.IsActive)
+        {
+            return new ApiResponse<TokenResponse>("Invalid user!");
+        }
 
-            string token = Token(entity);
-            TokenResponse tokenResponse = new()
-            {
-                Token = token,
-                ExpireDate = DateTime.Now.AddMinutes(jwtConfig.AccessTokenExpiration),
-                UserName = entity.UserName,
-                Email = entity.Email
-            };
+        string token = Token(entity);
+        TokenResponse tokenResponse = new()
+        {
+            Token = token,
+            ExpireDate = DateTime.Now.AddMinutes(jwtConfig.AccessTokenExpiration),
+            UserName = entity.UserName,
+            Email = entity.Email
+        };
 
-            return new ApiResponse<TokenResponse>(tokenResponse);
-        
+        return new ApiResponse<TokenResponse>(tokenResponse);
+
     }
 
     private string Token(User user)

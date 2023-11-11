@@ -7,7 +7,7 @@ using ECommerce.Schema;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 
-namespace ECommerce.Operation.AddressOperations.Queries.GetAddressDetails;
+namespace ECommerce.Operation.AddressOperations.Queries.GetAllAddresses;
 public class GetAllProductsQueryHandler : IRequestHandler<GetAllAddressesQuery, ApiResponse<List<AddressResponse>>>
 {
 

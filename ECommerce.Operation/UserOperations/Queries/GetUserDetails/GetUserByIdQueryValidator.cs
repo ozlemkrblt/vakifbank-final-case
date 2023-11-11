@@ -1,7 +1,7 @@
 ﻿using ECommerce.Operation.UserOperations.Cqrs;
 using FluentValidation;
 
-namespace ECommerce.Operation.UserOperations.Queries.GetUserById;
+namespace ECommerce.Operation.UserOperations.Queries.GetUserDetails;
 public class GetUserByIdQueryValidator : AbstractValidator<GetUserByIdQuery>
 {
     public GetUserByIdQueryValidator()

@@ -2,7 +2,7 @@
 using FluentValidation;
 
 
-namespace ECommerce.Operation.AddressOperations.Queries.GetAddressDetails
+namespace ECommerce.Operation.AddressOperations.Queries.GetAdressesByUserId
 {
     public class GetAddressesByUserIdQueryValidator : AbstractValidator<GetAddressesByUserIdQuery>
     {

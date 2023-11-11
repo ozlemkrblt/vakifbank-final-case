@@ -7,7 +7,7 @@ using ECommerce.Schema;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 
-namespace ECommerce.Operation.ReceiptOperations.Queries.GetReceiptDetails;
+namespace ECommerce.Operation.ReceiptOperations.Queries.GetAllReceipts;
 public class GetAllReceiptsQueryHandler : IRequestHandler<GetAllReceiptsQuery, ApiResponse<List<ReceiptResponse>>>
 {
 

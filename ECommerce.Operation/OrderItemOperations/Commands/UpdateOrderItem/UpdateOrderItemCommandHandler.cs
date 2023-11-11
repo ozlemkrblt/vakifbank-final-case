@@ -7,7 +7,7 @@ using ECommerce.Operation.OrderItemOperations.Cqrs;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 
-namespace ECommerce.Operation.OrderOperations.Commands.UpdateOrderItem;
+namespace ECommerce.Operation.OrderItemOperations.Commands.UpdateOrderItem;
 
 public class UpdateOrderItemCommandHandler : IRequestHandler<UpdateOrderItemCommand, ApiResponse>
 {

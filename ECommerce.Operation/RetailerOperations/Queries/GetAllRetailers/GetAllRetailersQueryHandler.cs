@@ -7,7 +7,7 @@ using ECommerce.Schema;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 
-namespace ECommerce.Operation.RetailerOperations.Queries.GetRetailerDetails;
+namespace ECommerce.Operation.RetailerOperations.Queries.GetAllRetailers;
 public class GetAllRetailersQueryHandler : IRequestHandler<GetAllRetailersQuery, ApiResponse<List<RetailerResponse>>>
 {
 

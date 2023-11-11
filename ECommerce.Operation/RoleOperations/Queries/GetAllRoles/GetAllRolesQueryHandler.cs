@@ -7,7 +7,7 @@ using ECommerce.Schema;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 
-namespace ECommerce.Operation.RoleOperations.Queries.GetRoleDetails;
+namespace ECommerce.Operation.RoleOperations.Queries.GetAllRoles;
 public class GetAllRolesQueryHandler : IRequestHandler<GetAllRolesQuery, ApiResponse<List<RoleResponse>>>
 {
 

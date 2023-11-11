@@ -7,7 +7,7 @@ using ECommerce.Data.Domain;
 using ECommerce.Schema;
 using Microsoft.EntityFrameworkCore;
 
-namespace ECommerce.Operation.ReceiptOperations.Queries.GetReceiptInfoDetails;
+namespace ECommerce.Operation.ReceiptOperations.Queries.GetReceiptInfoByReceiptId;
 public class GetReceiptInfoByReceiptIdQueryHandler : IRequestHandler<GetReceiptInfoByReceiptIdQuery, ApiResponse<ReceiptInfoResponse>>
 {
     private readonly ECommerceDbContext dbContext;

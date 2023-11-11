@@ -3,7 +3,7 @@ using ECommerce.Operation.OrderOperations.Cqrs;
 using FluentValidation;
 using System.Text.RegularExpressions;
 
-namespace ECommerce.Operation.OrderOperations.Commands.UpdateOrder;
+namespace ECommerce.Operation.OrderItemOperations.Commands.UpdateOrderItem;
 public class UpdateOrderItemCommandValidator : AbstractValidator<UpdateOrderCommand>
 {
     public UpdateOrderItemCommandValidator()

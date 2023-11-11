@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace YourNamespace.Migrations
+namespace ECommerce.Data.Migrations
 {
     public partial class SeedData : Migration
     {

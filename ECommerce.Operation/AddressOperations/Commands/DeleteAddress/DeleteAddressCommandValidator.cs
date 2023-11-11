@@ -1,7 +1,7 @@
 ﻿using ECommerce.Operation.AddressOperations.Cqrs;
 using FluentValidation;
 
-namespace Vk.Operation.Validation;
+namespace ECommerce.Operation.AddressOperations.Commands.DeleteAddress;
 
 public class DeleteAddressCommandValidator : AbstractValidator<DeleteAddressCommand>
 {

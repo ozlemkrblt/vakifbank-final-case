@@ -11,7 +11,7 @@ using ECommerce.Operation.RetailerOperations.Queries.GetRetailerDetails;
 using ECommerce.Operation.RetailerOperations.Cqrs;
 using ECommerce.Data.Uow;
 
-namespace ECommerce.Operation.ProductOperations.Queries.GetProductDetails;
+namespace ECommerce.Operation.ProductOperations.Queries.GetAllProducts;
 public class GetAllRetailersQueryHandler : IRequestHandler<GetAllProductsQuery, ApiResponse<List<ProductResponse>>>
 {
 
@@ -44,9 +44,10 @@ public class GetAllRetailersQueryHandler : IRequestHandler<GetAllProductsQuery, 
                 .ToListAsync(cancellationToken);
 
 
-            foreach (Product p in list) {
+            foreach (Product p in list)
+            {
 
-                p.Price += (p.Price * profitmargin) / 100; 
+                p.Price += p.Price * profitmargin / 100;
             }
 
 
@@ -63,7 +64,7 @@ public class GetAllRetailersQueryHandler : IRequestHandler<GetAllProductsQuery, 
             foreach (Product p in list)
             {
 
-                p.Price += (p.Price * pMargin) / 100;
+                p.Price += p.Price * pMargin / 100;
             }
 
 

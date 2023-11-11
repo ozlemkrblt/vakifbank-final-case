@@ -1,7 +1,7 @@
 ﻿using ECommerce.Operation.ReceiptOperations.Cqrs;
 using FluentValidation;
 
-namespace ECommerce.Operation.ReceiptIdOperations.Queries.GetReceiptDetails;
+namespace ECommerce.Operation.ReceiptOperations.Queries.GetReceiptInfoByUserId;
 public class GetReceiptInfoByUserIdQueryValidator : AbstractValidator<GetReceiptInfoByUserIdQuery>
 {
     public GetReceiptInfoByUserIdQueryValidator()

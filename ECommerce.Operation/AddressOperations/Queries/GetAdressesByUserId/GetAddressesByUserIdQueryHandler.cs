@@ -7,7 +7,7 @@ using ECommerce.Schema;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 
-namespace ECommerce.Operation.AddressOperations.Queries.GetAddressDetails;
+namespace ECommerce.Operation.AddressOperations.Queries.GetAdressesByUserId;
 public class GetAddressesByUserIdQueryHandler : IRequestHandler<GetAddressesByUserIdQuery, ApiResponse<List<AddressResponse>>>
 {
 
@@ -21,7 +21,7 @@ public class GetAddressesByUserIdQueryHandler : IRequestHandler<GetAddressesByUs
 
     public async Task<ApiResponse<List<AddressResponse>>> Handle(GetAddressesByUserIdQuery request,
         CancellationToken cancellationToken)
-    { 
+    {
 
 
         List<Address> list = await dbContext.Set<Address>().Include(x => x.User).Where(x => x.User.Id == request.UserId)

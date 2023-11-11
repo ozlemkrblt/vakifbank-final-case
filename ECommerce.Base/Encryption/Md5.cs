@@ -1,4 +1,4 @@
-﻿namespace ECommerce.Base;
+﻿namespace ECommerce.Base.Encryption;
 
 public static class Md5
 {

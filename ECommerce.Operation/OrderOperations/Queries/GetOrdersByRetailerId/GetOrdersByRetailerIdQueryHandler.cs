@@ -7,7 +7,7 @@ using ECommerce.Schema;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 
-namespace ECommerce.Operation.OrderItemOperations.Queries.GetOrdersByRetailerId;
+namespace ECommerce.Operation.OrderOperations.Queries.GetOrdersByRetailerId;
 public class GetOrdersByRetailerIdQueryHandler : IRequestHandler<GetOrdersByRetailerIdQuery, ApiResponse<List<OrderResponse>>>
 {
 

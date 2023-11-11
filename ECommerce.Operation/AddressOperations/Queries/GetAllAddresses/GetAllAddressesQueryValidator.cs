@@ -1,9 +1,8 @@
-﻿
-using ECommerce.Operation.AddressOperations.Cqrs;
+﻿using ECommerce.Operation.AddressOperations.Cqrs;
 using FluentValidation;
 
 
-namespace ECommerce.Operation.AddressOperations.Queries.GetAddressDetails
+namespace ECommerce.Operation.AddressOperations.Queries.GetAllAddresses
 {
     public class GetAllAddressesQueryValidator : AbstractValidator<GetAllAddressesQueryValidator>
     {
