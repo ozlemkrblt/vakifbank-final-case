@@ -6,6 +6,7 @@
     Bir şirket ve bayileri arasında sipariş akışını sağlamak için kurulmuş bir sistemdir.
     <br/>
     -- Henüz tamamlanmamış halindedir--
+    master branchinde API'yi , dev branchinde önyüzü bulabilirsiniz.
     <br/>
 
 
