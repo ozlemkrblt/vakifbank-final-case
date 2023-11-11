@@ -1,20 +1,28 @@
 ﻿using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations.Schema;
+using ECommerce.Payment.Domain;
 
 namespace ECommerce.Data.Domain;
 
 [Table("Retailer", Schema = "dbo")]
 public class Retailer : User
 {
-    
+
     //retailer may have multiple receipt infos and choose between them in order process.
     public virtual List<ReceiptInfo> ReceiptInfos { get; set; } = new List<ReceiptInfo>();
 
     public virtual List<Order> Orders { get; set; } = new List<Order>();
 
-    // Özel Fiyatlandırma(Kar marjı, anlaşmalı fiyatlar vb.)
-    //Açık Hesap Limiti
+    public virtual List<Card> Cards { get; set; } = new List<Card>();
+
+    public int CheckAccountId { get; set; }
+    public CheckAccount CheckAccount { get; set; }
+
+    public int CreditAccountId { get; set; }
+    public virtual CreditAccount CreditAccount {get; set;}
+
+    public double ProfitMargin { get; set; } //ProfitMargin
 
 }
 
@@ -41,6 +49,11 @@ public class RetailerConfiguration : IEntityTypeConfiguration<Retailer>
             .HasForeignKey(x => x.RetailerId)
             .IsRequired(true)
             .OnDelete(DeleteBehavior.Restrict);
-
+       
+        builder.HasMany(x => x.Cards)
+        .WithOne(x => x.Retailer)
+         .HasForeignKey(x => x.RetailerId)
+        .IsRequired(true)
+        .OnDelete(DeleteBehavior.Restrict);
     }
 }

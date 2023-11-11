@@ -1,7 +1,7 @@
 ﻿namespace ECommerce.Payment.Base;
 public enum PaymentStatus
 {
-    WaitingforPayment = 1 ,
+    Pending = 1 ,
 
     OnHold = 2,
     Cancelled= 3,

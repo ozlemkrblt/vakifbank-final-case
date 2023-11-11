@@ -37,7 +37,7 @@ public class UpdateStockStatusInRangeCommandHandler : IRequestHandler<UpdateStoc
             }
 
 
-            entity.StockStatus = (Base.Stock.StockStatus)i.Value;
+            entity.StockStatus = (Base.Enums.StockStatus)i.Value;
             entity.UpdateDate = DateTime.UtcNow;
             //entity.UpdateUserId= 
 

@@ -2,7 +2,8 @@
 using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations.Schema;
 using ECommerce.Base.BaseModel;
-using ECommerce.Payment.Base;
+using ECommerce.Payment.Domain;
+using ECommerce.Base.Enums;
 
 namespace ECommerce.Data.Domain;
 
@@ -13,14 +14,19 @@ public class Order : BaseModel
     public int OrderNo { get; set; }
     public DateTime OrderDate { get; set; }
     public double Amount { get; set; }
-    public virtual PaymentStatus PaymentStatus { get; set; }
 
+    public int PaymentId { get; set; }
+    public virtual OrderPayment Payment { get; set; }
     public int RetailerId { get; set; }  // one order can belong to one user
     public Retailer Retailer { get; set; }
 
     public int? ReceiptId { get; set; }
     public virtual Receipt Receipt { get; set; }
     public virtual List<OrderItem> Items { get; set; } = new List<OrderItem>();  // one order can contain many orderitems
+
+    public bool isApproved { get; set; } = false;
+
+    public OrderStatus OrderStatus { get; set; }
 }
 
 public class OrderConfiguration : IEntityTypeConfiguration<Order>
@@ -34,6 +40,7 @@ public class OrderConfiguration : IEntityTypeConfiguration<Order>
         builder.Property(x => x.IsActive).IsRequired().HasDefaultValue(true);
 
         builder.Property(x => x.Id).ValueGeneratedOnAdd().IsRequired();
+        builder.Property(x => x.Id).HasDefaultValue(false);
         builder.Property(x => x.OrderNo).IsRequired(true).HasMaxLength(8).IsFixedLength(); 
         builder.Property(x => x.OrderDate).IsRequired(true).HasDefaultValue(DateTime.UtcNow);
         builder.Property(x => x.RetailerId).IsRequired().HasMaxLength(20);

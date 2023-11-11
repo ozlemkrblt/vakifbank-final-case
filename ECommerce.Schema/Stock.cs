@@ -1,4 +1,4 @@
-﻿using ECommerce.Base.Stock;
+﻿using ECommerce.Base.Enums;
 using ECommerce.Data.Domain;
 using System.Collections;
 using System.Collections.Generic;

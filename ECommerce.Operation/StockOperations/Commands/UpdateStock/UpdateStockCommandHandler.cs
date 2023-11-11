@@ -29,7 +29,7 @@ public class UpdateStockCommandHandler : IRequestHandler<UpdateStockCommand, Api
         {
             return new ApiResponse("Record not found!");
         }
-        entity.StockStatus = (Base.Stock.StockStatus)request.Model.StockStatus;
+        entity.StockStatus = (Base.Enums.StockStatus)request.Model.StockStatus;
         entity.StockValue = request.Model.StockValue;
         entity.MaxStock = request.Model.MaxStock;
         entity.ProductId = request.Model.ProductId;

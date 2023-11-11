@@ -11,5 +11,5 @@ namespace ECommerce.Operation.OrderOperations.Cqrs;
     public record DeleteOrderCommand(int Id) : IRequest<ApiResponse>;
     public record GetAllOrdersQuery() : IRequest<ApiResponse<List<OrderResponse>>>;
     public record GetOrderByIdQuery(int Id) : IRequest<ApiResponse<OrderResponse>>;
-
+    public record GetOrdersByRetailerIdQuery(int Id) : IRequest<ApiResponse<List<OrderResponse>>>;
 
