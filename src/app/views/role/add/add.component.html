@@ -1,0 +1,32 @@
+<div class="bg-light min-vh-100 d-flex flex-row align-items-center">
+  <c-container>
+    <c-row class="justify-content-center">
+      <c-col lg="7" md="9" xl="6">
+        <c-card class="mx-4">
+          <c-card-body class="p-4">
+            <form cForm [formGroup]="roleForm">
+              <h1>Create Role</h1>
+              <p class="text-medium-emphasis">Create role</p>
+              <c-input-group class="mb-3">
+                <span cInputGroupText>
+                  <svg cIcon name="cilUser"></svg>
+                </span>
+                
+                <input formControlName="Id" autoComplete="Id" cFormControl placeholder="Give a role id." type = "number"/>
+              </c-input-group>
+              <c-input-group class="mb-4">
+                <span cInputGroupText>
+                  <svg cIcon name="cilLockLocked"></svg>
+                </span>
+                <input formControlName="Name" autoComplete="Name" cFormControl placeholder="Name" />
+              </c-input-group>
+              <div class="d-grid">
+                <button cButton (click)="onSubmit()"  color="success">Create Role</button>
+              </div>
+            </form>
+          </c-card-body>
+        </c-card>
+      </c-col>
+    </c-row>
+  </c-container>
+</div>

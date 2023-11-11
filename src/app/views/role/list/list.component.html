@@ -1,0 +1,25 @@
+<c-card *ngIf="roles.length > 0" class="mb-4">
+    <c-card-header>
+      <strong>Role List</strong>
+    </c-card-header>
+    <c-card-body >
+        <table cTable>
+          <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Id</th>
+            <th scope="col"> Name</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr *ngFor="let r of roles;">
+            <th scope="row">{{ r.id }}</th>
+            <td>{{r.name}}</td>
+          </tr>
+          </tbody>
+        </table>
+    </c-card-body>
+  </c-card>
+  <div *ngIf="roles.length == 0 ">
+    <p>Loading roles...</p>
+  </div>

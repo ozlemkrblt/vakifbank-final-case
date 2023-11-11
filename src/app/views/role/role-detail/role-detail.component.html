@@ -1,0 +1,13 @@
+<div *ngIf="role">
+    <h2>Role Details</h2>
+    <p>ID: {{ role.id }}</p>
+    <p>Name: {{ role.name }}</p>
+    <!-- Add more properties as needed -->
+  
+    <!-- Your other HTML content related to role details -->
+  
+  </div>
+  
+  <div *ngIf="!role">
+    <p>Loading role details...</p>
+  </div>

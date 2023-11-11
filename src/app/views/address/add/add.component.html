@@ -1,0 +1,66 @@
+<c-card class="mb-4">
+    <c-card-header ngPreserveWhitespaces>
+        <strong>Address Add</strong>
+      </c-card-header>
+      <c-card-body> 
+        <form [formGroup]="addressForm" cForm>
+            <div class="mb-3">
+              <label cLabel for="addressFormControlInput1">User Id</label>
+              <input cFormControl
+                     id="addressFormControlInput1"
+                     placeholder="User Id"
+                     type="number"
+                     formControlName="UserId"
+              />
+            </div>
+            <div class="mb-3">
+              <label cLabel for="addressFormControlInput2">Address Line 1</label>
+              <input cFormControl
+                     id="addressFormControlInput2"
+                     placeholder="Please write the first line of address. ( Street , Boulevard etc.)"
+                     type="text"
+                     formControlName="AddressLine1"
+              />
+            </div>
+            <div class="mb-3">
+                <label cLabel for="addressFormControlInput3">Address Line 2</label>
+                <input cFormControl
+                       id="addressFormControlInput3"
+                       placeholder="Please write the second line of address. ( Flat number etc.)"
+                       type="text"
+                       formControlName="AddressLine2"
+                />
+              </div>
+            <div class="mb-3">
+                <label cLabel for="addressFormControlInput4">District</label>
+                <input cFormControl
+                       id="addressFormControlInput4"
+                       placeholder="District Name"
+                       type="text"
+                       formControlName="District"
+                />
+            </div>
+            <div class="mb-3">
+                <label cLabel for="addressFormControlInput5">City</label>
+                <input cFormControl
+                       id="addressFormControlInput5"
+                       placeholder="City "
+                       type="text"
+                       formControlName="City"
+                />
+            </div>
+            <div class="mb-3">
+                <label cLabel for="addressFormControlInput6">Postal Code</label>
+                <input cFormControl
+                       id="addressFormControlInput6"
+                       placeholder="5 digit postal code"
+                       type="text"
+                       formControlName="PostalCode"
+                />
+            </div>
+            <button cButton (click)="onSubmit()" class="mt-3" color="primary">
+                Save
+            </button>
+        </form>
+      </c-card-body>
+    </c-card>
